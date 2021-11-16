@@ -9,15 +9,15 @@
 </head>
 <body>
 
-<h1>Личная страница Романа Пилецкого</h1>
+<h1>Личная страница Слабко</h1>
 
 <ul>
 
     <li>2 занятие - Типы данных, операции
-<!--        <ul>-->
-<!--            <li><a href="./lesson-2/null.php">Значение null в PHP</a></li>-->
-<!--            <li><a href="./lesson-2/boolean_values.php">Логические значения в PHP</a></li>-->
-<!--        </ul>-->
+        <ul>
+            <li><a href="./lesson-2/null.php">Значение null в PHP</a></li>
+            <li><a href="./lesson-2/boolean_values.php">Логические значения в PHP</a></li>
+        </ul>
     </li>
 
 
