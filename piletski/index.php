@@ -16,6 +16,7 @@
                 <li><a href="./lesson-2/boolean_values.php">Логические значения в PHP</a></li>
                 <li><a href="./lesson-2/string_values.php">Строки в PHP</a></li>
                 <li><a href="./lesson-2/integer_values.php">Числа и операции над ними в PHP</a></li>
+                <li><a href="./lesson-2/practice_work.php">Практика по работе с переменными и операциями в PHP</a></li>
             </ul>
         </li>
         <li>3 занятие
