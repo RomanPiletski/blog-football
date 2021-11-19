@@ -7,14 +7,15 @@ jobs:
 
     steps:
       - name: 🚚 Get latest code
-        uses: actions/checkout@v2
-
-      - name: 📂 Sync files
-        uses: renetalk/php7-phpunit-composer-git-ftp@latest
+      - uses: actions/checkout@v1
+      - name: git-ftp push
+        uses: sebastianpopp/git-ftp-action@releases/v3
         with:
-          script: git ftp push --force -b master --user ${{ secrets.FTP_USER }} --passwd ${{ secrets.FTP_PASSWORD }} ${{ secrets.FTP_SERVER }}
+          url: ${{ secrets.FTP_SERVER }}
+          user: ${{ secrets.FTP_USER }}
+          password: ${{ secrets.FTP_PASSWORD }}
 
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v1
       - name: Slack Notification
         uses: rtCamp/action-slack-notify@v2
         env:
