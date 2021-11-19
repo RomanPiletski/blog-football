@@ -1,0 +1,12 @@
+@font-face {
+    font-family: "JosefinSans";
+    src: url("../assets/font/JosefinSans-VariableFont_wght.ttf");
+}
+@font-face {
+    font-family:"IndieFlower";
+    src: url(../assets/font/IndieFlower-Regular.ttf);
+}
+@font-face {
+    font-family:"JosefinSans-VariableFont";
+    src: url(../assets/font/JosefinSans-VariableFont_wght.ttf);
+}

@@ -1,0 +1,89 @@
+@import url(./font.css);
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family:"JosefinSans", Arial, sans-serif;
+    font-size: 14px;
+}
+header{
+    background-color: rgb(236, 236, 236);
+    .wrapper{
+        display: flex;
+        padding: 20px;
+        width: 1200px;
+        margin: 0 auto;
+        justify-content: space-between;
+        .img{
+            background: url(../assets/icon/logo.jpg);
+            border-radius: 50px;
+            background-position: center;
+            background-repeat: none;
+            background-size: cover;
+            width: 50px;
+            height: 50px;
+        }
+        div{
+            display: flex;
+            width: 600px;
+            justify-content: space-between;
+            font-size: 20px;
+            text-transform: uppercase;
+            p,a{
+                display:flex;
+                align-items: center;
+                text-decoration:none;
+                color:#000;
+            }
+            .gmail{
+                width: 200px;
+            }
+            p:hover,a:hover{
+                border-bottom: 2px solid #000;
+                cursor: pointer;
+
+            }
+        }
+    }
+}
+.name{
+    padding: 40px 0;
+    h1{
+        font-size: 30px;
+        font-family:"IndieFlower", Arial, sans-serif;
+        text-align: center;
+        color:rgba(108, 108, 108, 0.857);
+    }
+}
+.hw1{
+    background-color:rgb(236, 236, 236);
+    padding-top: 20px;
+    h2{
+        text-align: center;
+        font-size: 20px;
+        color: #000;
+    }
+    .wrapper_hw1{
+        display: grid;
+        grid-template-columns: 400px 400px;
+        justify-content: space-around;
+        padding:20px;
+        h2{
+            font-size: 16px;
+            text-align: left;
+            text-transform: uppercase;
+            color:rgba(108, 108, 108, 0.857);
+            margin-bottom: 20px;
+        }
+        li{
+            font-size: 16px;
+            margin: 10px 0;
+            a{
+                text-decoration: none;
+            }
+            a:hover{
+                border-bottom: 1px solid #000;
+                color:#000;
+            }
+        }
+    }
+}
