@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Emelyanov</title>
 </head>
 <body>
 
@@ -13,13 +13,12 @@
 
 <ul>
 
-    <li>2 занятие - Типы данных, операции
+    <li>Работа с HTML тегами
         <ul>
-            <li><a href="./index.php">Значение null в PHP</a></li>
+            <li><a href="./lesson-2/htmlTeg.php">HW HTML</a></li>
             <li><a href="./lesson-2/boolean_values.php">Логические значения в PHP</a></li>
         </ul>
     </li>
-
 
     <li>3 занятие
         <ul>
