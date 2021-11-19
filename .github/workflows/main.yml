@@ -14,6 +14,7 @@ jobs:
           user: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD }}
 
+
       - uses: actions/checkout@v2
       - name: Slack Notification
         uses: rtCamp/action-slack-notify@v2
