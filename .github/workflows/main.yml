@@ -24,4 +24,4 @@ jobs:
           SLACK_FOOTER: ${{ secrets.SLACK_FOOTER }}
           SLACK_USERNAME: ${{ secrets.SLACK_USERNAME }}
           SLACK_ICON_EMOJI: ${{ secrets.SLACK_ICON_EMOJI }}
-          MSG_MINIMAL: true
+          MSG_MINIMAL: commit
