@@ -22,8 +22,9 @@ jobs:
           SLACK_CHANNEL: git-test
           SLACK_COLOR: good
           SLACK_ICON: http://n336298b.beget.tech/.github/workflows/logo.png
-          SLACK_MESSAGE: "Уважаемый ${{ $GITHUB_ACTOR }}  Ваши изменения уже на сайте можете проверять"
+          SLACK_MESSAGE: "Ваши изменения уже на сайте можете проверять"
           SLACK_TITLE: "Доставка кода 🚚"
-          SLACK_FOOTER: "Teachmeskills"
+          SLACK_FOOTER: "http://n336298b.beget.tech"
           SLACK_USERNAME: Github
+          SLACK_ICON_EMOJI: ":bell:"
           MSG_MINIMAL: true
