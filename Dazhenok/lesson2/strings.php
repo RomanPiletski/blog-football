@@ -1,21 +1,21 @@
 <?php
 //Task 1
 $str = "hello";
-echo $str;
+echo $str.'<br>';
 
 //Task 2
 $a = "abc";
 $b = "efd";
-echo $a.$b;
+echo $a.$b.'<br>';
 
 //Task 3
 $c = "Hello,";
 $d = " World!";
-echo $c.$d;
+echo $c.$d.'<br>';
 
 //Task 4
 $e = "bubble gum";
-echo strlen($e);
+echo strlen($e).'<br>';
 
 //Task 5
 $f = "фиолетовенький";
