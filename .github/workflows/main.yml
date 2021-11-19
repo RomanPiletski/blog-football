@@ -21,10 +21,9 @@ jobs:
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
           SLACK_CHANNEL: git-test
           SLACK_COLOR: good
-          SLACK_ICON: http://n336298b.beget.tech/.github/workflows/logo.png
           SLACK_MESSAGE: "Ваши изменения уже на сайте можете проверять"
           SLACK_TITLE: "Доставка кода 🚚"
           SLACK_FOOTER: "http://n336298b.beget.tech"
           SLACK_USERNAME: Github
-          SLACK_ICON_EMOJI: ":bell:"
+          SLACK_ICON_EMOJI: ":rocket:"
           MSG_MINIMAL: true
