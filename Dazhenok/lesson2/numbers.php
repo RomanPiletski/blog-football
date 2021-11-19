@@ -37,7 +37,7 @@ echo $result;
 //Task 19
 $b = 1.5;
 $c = 0.75;
-echo $b + $c;
+echo $b + $c.'<br>';
 
 //Task 20
 $a = -100;

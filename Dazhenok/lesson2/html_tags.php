@@ -1,6 +1,6 @@
 <?php
 //Task 1
-echo '<i>курсивный</i>';
+echo '<i>курсивный</i><br>';
 
 //Task 2
 echo '1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>';
