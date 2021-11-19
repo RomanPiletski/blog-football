@@ -10,13 +10,9 @@ jobs:
         uses: actions/checkout@v2
 
       - name: 📂 Sync files
-        uses: airvzxf/ftp-deployment-action@latest
+        uses: renetalk/php7-phpunit-composer-git-ftp@latest
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          user: ${{ secrets.FTP_USER }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local_dir: "./"
-          delete: "false"
+          script: git ftp push --force -b master --user ${{ secrets.FTP_USER }} --passwd ${{ secrets.FTP_PASSWORD }} ${{ secrets.FTP_SERVER }}
 
       - uses: actions/checkout@v2
       - name: Slack Notification
