@@ -5,4 +5,3 @@ var_dump($null);
 
 //Task 2
 var_dump($test);
-?>

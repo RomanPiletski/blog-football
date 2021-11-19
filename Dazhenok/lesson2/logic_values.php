@@ -6,4 +6,3 @@ var_dump($a);
 //Task 2
 $b = false;
 var_dump($b);
-?>
