@@ -11,6 +11,6 @@ Teachmeskills - самостоятельные и домашнии работы 
  * Никита Емельянов - http://n336298b.beget.tech/emelyanov
  * Николай Рашкевич - 
  * Антон Ащеулов - http://n336298b.beget.tech/ascheulov
- * Илья Прушак - 
+ * Илья Прушак - http://n336298b.beget.tech/prushak
  * Роман Пелитский - http://n336298b.beget.tech/piletski
  * Екатерина Хлебец - 
