@@ -4,7 +4,6 @@ jobs:
   web-deploy:
     name: 🎉 Deploy
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v1
       - name: 🚚 Get latest code
