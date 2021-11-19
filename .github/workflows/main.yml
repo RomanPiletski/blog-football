@@ -9,12 +9,12 @@ jobs:
         uses: actions/checkout@v2
 
       - name: 📂 Sync files
-      uses: kevinpainchaud/simple-ftp-deploy-action@v1.2.1
-      with:
-        ftp_host: ${{ secrets.FTP_SERVER }}
-        ftp_username: ${{ secrets.FTP_USER }}
-        ftp_password: ${{ secrets.FTP_PASSWORD }}
-        local_source_dir: "./"
-        dist_target_dir: "./"
-        delete: "false"
-        exclude: "'^logs/' '^README.md'"
+        uses: kevinpainchaud/simple-ftp-deploy-action@v1.2.1
+        with:
+          ftp_host: ${{ secrets.FTP_SERVER }}
+          ftp_username: ${{ secrets.FTP_USER }}
+          ftp_password: ${{ secrets.FTP_PASSWORD }}
+          local_source_dir: "./"
+          dist_target_dir: "./"
+          delete: "false"
+          exclude: "'^logs/' '^README.md'"
