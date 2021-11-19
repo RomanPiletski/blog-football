@@ -6,16 +6,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: 🚚 Get latest code
       - uses: actions/checkout@v1
-      - name: git-ftp push
+      - name: 🚚 Get latest code
         uses: sebastianpopp/git-ftp-action@releases/v3
         with:
           url: ${{ secrets.FTP_SERVER }}
           user: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD }}
 
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - name: Slack Notification
         uses: rtCamp/action-slack-notify@v2
         env:
