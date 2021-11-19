@@ -20,8 +20,8 @@ jobs:
         env:
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
           SLACK_CHANNEL: git-test
-          SLACK_COLOR: ${{ job.status }} # or a specific color like 'good' or '#ff00ff'
+          SLACK_COLOR: good
           SLACK_ICON: http://n336298b.beget.tech/.github/workflows/logo.png?size=48
-          SLACK_MESSAGE: 'Ваши изменения уже на сайте :rocket:'
-          SLACK_TITLE: "Deploy success"
+          SLACK_MESSAGE: 'Ваши изменения уже на сайте'
+          SLACK_TITLE: "Доставка кода 🚚"
           SLACK_USERNAME: Github
