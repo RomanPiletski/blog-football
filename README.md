@@ -9,7 +9,7 @@ Teachmeskills - самостоятельные и домашнии работы 
  * Мария Пашковская - http://n336298b.beget.tech/pashkovskaya
  * Ольга Доженок - http://n336298b.beget.tech/Dazhenok
  * Никита Емельянов - http://n336298b.beget.tech/emelyanov
- * Николай Рашкевич - 
+ * Николай Рашкевич - http://n336298b.beget.tech/rashkevich/
  * Антон Ащеулов - http://n336298b.beget.tech/ascheulov
  * Илья Прушак - http://n336298b.beget.tech/prushak
  * Роман Пелитский - http://n336298b.beget.tech/piletski
