@@ -15,8 +15,12 @@
 
     <li>2 занятие - Типы данных, операции
         <ul>
-            <li><a href="#">Значение null в PHP</a></li>
-            <li><a href="#">Логические значения в PHP</a></li>
+            <li><a href="lesson-2/null.php">Значение null в PHP</a></li>
+            <li><a href="lesson-2/boolean.php">Логические значения в PHP</a></li>
+            <li><a href="lesson-2/string.php">Строки в PHP</a></li>
+            <li><a href="lesson-2/number.php">Числа и операции над ними в PHP</a></li>
+            <li><a href="lesson-2/variables-and-operations.php">Практика по работе с переменными и операциями в PHP</a></li>
+            <li><a href="#">Работа с HTML тегами в PHP</a></li>
         </ul>
     </li>
 
