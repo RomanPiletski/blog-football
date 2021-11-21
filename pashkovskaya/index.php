@@ -15,8 +15,8 @@
 
     <li>2 занятие - Типы данных, операции
         <ul>
-            <li><a href="./lesson-2/null.php">Значение null в PHP</a></li>
-            <li><a href="./lesson-2/boolean_values.php">Логические значения в PHP</a></li>
+            <li><a href="lesson-2/class.php">Работа в классе</a></li>
+            <li><a href="lesson-2/home.php">ДЗ</a></li>
         </ul>
     </li>
 
