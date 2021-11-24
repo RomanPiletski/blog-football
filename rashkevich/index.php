@@ -17,8 +17,10 @@
     </li>
     <li>3 занятие
         <ul>
-            <li><a href="#">....</a></li>
-            <li><a href="#">...</a></li>
+            <li><a href="Homeworks\lesson_3\green_card.php">green card</a></li>
+            <li><a href="#">yellow card</a></li>
+            <li><a href="#">red card</a></li>
+
         </ul>
     </li>
 </ul>
