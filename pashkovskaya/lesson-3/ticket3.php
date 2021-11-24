@@ -9,7 +9,7 @@ if($k<1){
 }else if($k>=1){
     $x=$z*($z+1);
 }
-$y=intval(exp((log(1+$x**2)+cos($x+1)))**($k*$x));
+$y=intval((log(1+$x**2)+cos($x+1))**M_E**($k*$x));
 echo "First value $y <br>";
 
 $k=1;
