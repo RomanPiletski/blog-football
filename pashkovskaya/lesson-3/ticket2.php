@@ -1,5 +1,5 @@
 <?php
-function max(...$values){
+function find_max(...$values){
     $max_value = $values[0];
     for ($i = 0; $i < sizeof($values); $i++) {
         if($max_value<$values[$i]){
@@ -8,7 +8,7 @@ function max(...$values){
     }
     return $max_value;
 }
-function min(...$values){
+function find_min(...$values){
     $min_value = $values[0];
     for ($i = 0; $i < sizeof($values); $i++) {
         if($min_value>$values[$i]){
@@ -20,8 +20,8 @@ function min(...$values){
 $x=1;
 $y=3;
 $z=6;
-if(!(min($x, $y) === 0)){
-    $m = max($x, $y, $z)/min($x, $y) + 5;
+if(!(find_min($x, $y) === 0)){
+    $m = find_max($x, $y, $z)/find_min($x, $y) + 5;
     echo $m;
 }else{
     echo "Invalid input";
