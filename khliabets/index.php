@@ -25,7 +25,29 @@
     </li>
 
 
-    <li>3 занятие
+    <li>3 занятие - Условная операции if..else
+        <ul>
+            <li> Самостоятельная работа </li>
+                <ul>
+                    <li><a href="lesson-3/isset.php">Команда isset в PHP</a></li>
+                    <li><a href="lesson-3/empty.php">Команда empty в PHP</a></li>
+                </ul>
+
+            <li> Домашние задания </li>
+
+            <ul>
+                <li><a href="lesson-3/easy-level.php">Легкий уровень</a></li>
+                <li><a href="#">...</a></li>
+                <li><a href="#">...</a></li>
+                <li><a href="#">...</a></li>
+                <li><a href="#">...</a></li>
+            </ul>
+        </ul>
+
+
+    </li>
+
+    <li>4 занятие -
         <ul>
             <li><a href="#">....</a></li>
             <li><a href="#">...</a></li>
