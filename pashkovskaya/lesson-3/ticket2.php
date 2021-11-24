@@ -25,7 +25,7 @@ $y=3;
 $z=6;
 if(!(find_min($x, $y) === 0)){
     $m = find_max($x, $y, $z)/find_min($x, $y) + 5;
-    echo "First value $m";
+    echo "First value $m <br>";
 }else{
     echo "Invalid input<br>";
 }
@@ -34,7 +34,7 @@ $y=4;
 $z=3;
 if(!(find_min($x, $y) === 0)){
     $u = find_min($x, $y, $z)/find_max(find_min($x,$y,$z), find_min($x,$y,$z));
-    echo "First value $u";
+    echo "Second value $u <br>";
 }else{
     echo "Invalid input<br>";
 }
