@@ -1,4 +1,7 @@
 <?php
+echo 'Составить программу для определения значения функции m.<br>
+Самостоятельно определить исключительные ситуации и предусмотреть диагностические сообщения,<br> 
+если нормальное завершение программы невозможно (например, деление на ноль).<br>';
 function find_max(...$values){
     $max_value = $values[0];
     for ($i = 0; $i < sizeof($values); $i++) {
@@ -22,7 +25,16 @@ $y=3;
 $z=6;
 if(!(find_min($x, $y) === 0)){
     $m = find_max($x, $y, $z)/find_min($x, $y) + 5;
-    echo $m;
+    echo "First value $m";
 }else{
-    echo "Invalid input";
+    echo "Invalid input<br>";
+}
+$x=4;
+$y=4;
+$z=3;
+if(!(find_min($x, $y) === 0)){
+    $u = find_min($x, $y, $z)/find_max(find_min($x,$y,$z), find_min($x,$y,$z));
+    echo "First value $u";
+}else{
+    echo "Invalid input<br>";
 }
