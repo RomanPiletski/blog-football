@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<h1>Личная страница Емельянова Никиты</h1>
+<h1>Личная страница Емельянова Никиты!</h1>
 
 <ul>
 
@@ -19,8 +19,13 @@
             <li><a href="./lesson-2/boolean_values.php">Логические значения в PHP</a></li>
         </ul>
     </li>
-
     <li>3 занятие
+        <ul>
+            <li><a href="./NullPHP/null.php">Null в php</a></li>
+            <li><a href="#">...</a></li>
+        </ul>
+    </li>
+    <li>4 занятие
         <ul>
             <li><a href="#">....</a></li>
             <li><a href="#">...</a></li>

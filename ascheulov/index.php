@@ -12,11 +12,10 @@
 <h1>Anton Ascheulov</h1>
 
 <ul>
-
     <li>2 занятие - Типы данных, операции
         <ul>
-            <li><a href="./lesson-2/null.php">Значение null в PHP</a></li>
-            <li><a href="./lesson-2/boolean_values.php">Логические значения в PHP</a></li>
+            <li><a href="./homework/lesson2_homework/variables_and_operations.php">Практика по работе с переменными и операциями в PHP</a></li>
+            <li><a href="./homework/lesson2_homework/HTML_tags_in_php.php">Работа с HTML тегами в PHP</a></li>
         </ul>
     </li>
 
