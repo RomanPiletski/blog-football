@@ -15,16 +15,17 @@
 
     <li>2 занятие - Типы данных, операции
         <ul>
-            <li><a href="./lesson-2/null.php">Значение null в PHP</a></li>
-            <li><a href="./lesson-2/boolean_values.php">Логические значения в PHP</a></li>
+            <li><a href="lesson-2/class.php">Работа в классе</a></li>
+            <li><a href="lesson-2/home.php">ДЗ</a></li>
         </ul>
     </li>
 
 
     <li>3 занятие
         <ul>
-            <li><a href="#">....</a></li>
-            <li><a href="#">...</a></li>
+            <li><a href="lesson-3/ticket1.php">Ticket 1</a></li>
+            <li><a href="lesson-3/ticket2.php">Ticket 2</a></li>
+            <li><a href="lesson-3/ticket3.php">Ticket 3</a></li>
         </ul>
     </li>
 
