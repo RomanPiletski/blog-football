@@ -6,14 +6,14 @@ $f_while=1;
 $i = 1;
 
 while ($i<=$number){
-    $f_while=$f_while*$i;
+    $f_while *= $i;
     $i++;
 }
 
 $f=1;
 
 for ($i=1 ; $i<=$number; $i++){
-    $f = $f*$i;
+    $f *= $i;
 }
 
 $f_foreach = 1;

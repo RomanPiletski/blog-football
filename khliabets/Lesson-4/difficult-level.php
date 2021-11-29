@@ -6,10 +6,23 @@
 
 $kol_el = rand(1,6);
 
-$arr1 = range(1 , $kol_el);
+$arr = range(1 , $kol_el);
 
 echo 'Начальный массив: ';
-var_dump($arr1);
+var_dump($arr);
+
+$el_start = 0;
+$el_end = $kol_el-1;
+
+while ($el_start < $el_end ){
+    $el_transit = $arr[$el_start];
+    $arr[$el_start] = $arr[$el_end];
+    $arr[$el_end] = $el_transit;
+    $el_start ++;
+    $el_end --;
+}
 
 echo "<br>" . 'Перевернутый массив: ';
-var_dump(array_reverse($arr1));
+var_dump($arr);
+
+//var_dump(array_reverse($arr1));

@@ -46,21 +46,20 @@
 
     </li>
 
-    <li>4 занятие - Массивы
+    <li>4 занятие - Массивы и циклы
         <ul>
             <li> Самостоятельная работа </li>
             <ul>
-                <li><a href="#">...</a></li>
+                <li><a href="Lesson-4/index.php">...</a></li>
 
             </ul>
 
             <li> Домашние задания </li>
 
             <ul>
-                <li><a href="#">Легкий уровень</a></li>
+                <li><a href="#">...</a></li>
                 <li><a href="Lesson-4/average-level.php">Средний уровень</a></li>
                 <li><a href="Lesson-4/difficult-level.php">Сложный уровень</a></li>
-
             </ul>
         </ul>
     </li>
