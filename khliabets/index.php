@@ -58,7 +58,7 @@
 
             <ul>
                 <li><a href="#">Легкий уровень</a></li>
-                <li><a href="#">Средний уровень</a></li>
+                <li><a href="Lesson-4/average-level.php">Средний уровень</a></li>
                 <li><a href="Lesson-4/difficult-level.php">Сложный уровень</a></li>
 
             </ul>
