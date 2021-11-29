@@ -50,14 +50,14 @@
         <ul>
             <li> Самостоятельная работа </li>
             <ul>
-                <li><a href="Lesson-4/index.php">...</a></li>
+                <li><a href="Lesson-4/index.php">Работа на занятии</a></li>
 
             </ul>
 
             <li> Домашние задания </li>
 
             <ul>
-                <li><a href="#">...</a></li>
+                <li><a href="Lesson-4/easy-level.php">Легкий уровень</a></li>
                 <li><a href="Lesson-4/average-level.php">Средний уровень</a></li>
                 <li><a href="Lesson-4/difficult-level.php">Сложный уровень</a></li>
             </ul>
