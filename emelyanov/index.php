@@ -22,12 +22,12 @@
     <li>3 занятие
         <ul>
             <li><a href="./NullPHP/null.php">Null в php</a></li>
-            <li><a href="#">...</a></li>
+            <li><a href="./arrHomeWork/index.php">HM arr</a></li>
         </ul>
     </li>
     <li>4 занятие
         <ul>
-            <li><a href="#">....</a></li>
+            <li><a href="./cyclesHomeWork/index.php">cyclesHMWork</a></li>
             <li><a href="#">...</a></li>
         </ul>
     </li>
