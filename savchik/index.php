@@ -23,9 +23,6 @@
                 </a></li>
         </ul>
     </li>
-
-
-
     <li>3 занятие
         <ul>
             <li><a href="./lesson-3/task1.php">Задача 1</a></li>
@@ -33,6 +30,14 @@
             <li><a href="./lesson-3/task3.php">Задача 3</a></li>
         </ul>
     </li>
+    <li>3 занятие
+        <ul>
+            <li><a href="./lesson-4/task1.php">Задача 1</a></li>
+            <li><a href="./lesson-4/task2.php">Задача 2</a></li>
+            <li><a href="./lesson-4/task3.php">Задача 3</a></li>
+        </ul>
+    </li>
+
 
 
 </ul>
