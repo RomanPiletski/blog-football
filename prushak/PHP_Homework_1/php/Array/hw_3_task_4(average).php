@@ -6,7 +6,7 @@ function factorWithWhile($num){
     $i = 1;
     $fact = null;
     while($i<=$num){
-        $fact+=$i;
+        $fac*=$i;
         $i++;
     }
     return $fact;
@@ -15,7 +15,7 @@ function factorWithWhile($num){
 function factorWithFor($num){
     $fact = null;
     for($i=1;$i<=$num;$i++){
-        $fact+=$i;
+        $fact*=$i;
     }
     return $fact;
 }
@@ -29,7 +29,7 @@ function factorWithForeach($num){
         $i++;
     }
     foreach ($arr as $index){
-        $fact+=$index;
+        $fact*=$index;
     }
     return $fact;
 }
