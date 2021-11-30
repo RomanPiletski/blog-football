@@ -2,7 +2,7 @@
     $arr = [];
     for ($i = 1; $i <= 99; $i++) {
         if (!($i % 2 == 0)) {
-            $arr[] = $i;
+            array_push($arr,$i);
         }
     }
     echo "Через цикл: <pre>";
