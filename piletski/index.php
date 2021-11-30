@@ -31,10 +31,10 @@
         <li class="lessons">4 занятие - Массивы и циклы
             <ul>
                 <li class="lessons_task"><a href="./lesson-4/ticket188_green.php">Задача по массивам - Ключи, значения </a></li>
-                <li class="lessons_task"><a href="./lesson-4/ticket147_red.php">Задача по массивам - Перестановка элементов в массиве </a></li>
+                <li class="lessons_task"><a href="./lesson-4/ticket147_red.php">Задача по массивам - </a></li>
                 <li class="lessons_task"><a href="./lesson-4/ticket179_green.php">Задача по циклам - Массив из нечетных чисел через цикл и функцию </a></li>
                 <li class="lessons_task"><a href="./lesson-4/ticket160_yellow.php">Задача по циклам - </a></li>
-                <li class="lessons_task"><a href="./lesson-4/ticket170_red.php">Задача по циклам - Вложенные циклы для сложных строк </a></li>
+                <li class="lessons_task"><a href="./lesson-4/ticket170_red.php">Задача по циклам - </a></li>
             </ul>
         </li>
         <li class="lessons">5 занятие -
