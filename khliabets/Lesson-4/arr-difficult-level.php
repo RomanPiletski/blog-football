@@ -24,5 +24,3 @@ while ($el_start < $el_end ){
 
 echo "<br>" . 'Перевернутый массив: ';
 var_dump($arr);
-
-//var_dump(array_reverse($arr1));

@@ -57,9 +57,9 @@
             <li> Домашние задания </li>
 
             <ul>
-                <li><a href="Lesson-4/easy-level.php">Легкий уровень</a></li>
-                <li><a href="Lesson-4/average-level.php">Средний уровень</a></li>
-                <li><a href="Lesson-4/difficult-level.php">Сложный уровень</a></li>
+                <li><a href="Lesson-4/arr-easy-level.php">Массивы - легкий уровень</a></li>
+                <li><a href="Lesson-4/cycles-average-level.php">Циклы - средний уровень</a></li>
+                <li><a href="Lesson-4/arr-difficult-level.php">Массивы - сложный уровень</a></li>
             </ul>
         </ul>
     </li>
