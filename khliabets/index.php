@@ -61,6 +61,7 @@
                 <li><a href="Lesson-4/arr-difficult-level.php">Массивы - сложный уровень</a></li>
                 <li><a href="Lesson-4/cycles-easy-level.php">Циклы - легкий уровень</a></li>
                 <li><a href="Lesson-4/cycles-average-level.php">Циклы - средний уровень</a></li>
+                <li><a href="Lesson-4/cycles-difficult-level.php">Циклы - сложный уровень</a></li>
 
             </ul>
         </ul>
