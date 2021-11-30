@@ -1,8 +1,9 @@
 <?php
     $arr = [];
-    for ($i = 1; $i <= 99; $i) {
-        $arr[] = $i;
-        $i = $i + 2;
+    for ($i = 1; $i <= 99; $i++) {
+        if (!($i % 2 == 0)) {
+            $arr[] = $i;
+        }
     }
     echo "Через цикл: <pre>";
     print_r($arr);
