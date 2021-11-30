@@ -34,7 +34,7 @@
                 <li class="lessons_task"><a href="./lesson-4/ticket147_red.php">Задача по массивам - </a></li>
                 <li class="lessons_task"><a href="./lesson-4/ticket179_green.php">Задача по циклам - Массив из нечетных чисел через цикл и функцию </a></li>
                 <li class="lessons_task"><a href="./lesson-4/ticket160_yellow.php">Задача по циклам - </a></li>
-                <li class="lessons_task"><a href="./lesson-4/ticket170_red.php">Задача по циклам - </a></li>
+                <li class="lessons_task"><a href="./lesson-4/ticket170_red.php">Задача по циклам - Вложенные циклы для сложных строк </a></li>
             </ul>
         </li>
         <li class="lessons">5 занятие -
