@@ -14,10 +14,10 @@ header{
         margin: 0 auto;
         justify-content: space-between;
         .img{
-            background: url(../assets/icon/logo.jpg);
+            background-image: url(../assets/icon/logo.jpg);
             border-radius: 50px;
             background-position: center;
-            background-repeat: none;
+            background-repeat: no-repeat;
             background-size: cover;
             width: 50px;
             height: 50px;
