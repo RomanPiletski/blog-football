@@ -29,6 +29,13 @@
         </ul>
     </li>
 
+    <li>4 занятие
+        <ul>
+            <li><a href="lesson-4/array_1.php">Task 1</a></li>
+            <li><a href="lesson-4/array_2.php">Task 2</a></li>
+        </ul>
+    </li>
+
 
 </ul>
 
