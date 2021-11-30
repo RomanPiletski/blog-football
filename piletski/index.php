@@ -28,12 +28,20 @@
                 <li class="lessons_task"><a href="./lesson-3/ticket113_red.php">Задачи по if...else - Трудная задача про функцию</a></li>
             </ul>
         </li>
-        <li class="lessons">4 занятие -
+        <li class="lessons">4 занятие - Массивы и циклы
             <ul>
-                <li class="lessons_task"><a href="#"></a></li>
-                <li class="lessons_task"><a href="#"></a></li>
-                <li class="lessons_task"><a href="#"></a></li>
-                <li class="lessons_task"><a href="#"></a></li>
+                <li class="lessons_task"><a href="./lesson-4/ticket188_green.php">Задача по массивам - Ключи, значения </a></li>
+                <li class="lessons_task"><a href="./lesson-4/ticket147_red.php">Задача по массивам - </a></li>
+                <li class="lessons_task"><a href="./lesson-4/ticket179_green.php">Задача по циклам - </a></li>
+                <li class="lessons_task"><a href="./lesson-4/ticket160_yellow.php">Задача по циклам - </a></li>
+                <li class="lessons_task"><a href="./lesson-4/ticket170_red.php">Задача по циклам - </a></li>
+            </ul>
+        </li>
+        <li class="lessons">5 занятие -
+            <ul>
+                <li class="lessons_task"><a href="#">...</a></li>
+                <li class="lessons_task"><a href="#">...</a></li>
+                <li class="lessons_task"><a href="#">...</a></li>
             </ul>
         </li>
     </ul>
