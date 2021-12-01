@@ -31,10 +31,13 @@
 
     <li>4 занятие
         <ul>
-            <li><a href="lesson-4/array_1.php">Array Task 1 easy</a></li>
-            <li><a href="lesson-4/array_2.php">Array Task 2 easy</a></li>
+            <div>Array 1 was delete</div>
+            <div>Array 2 was delete</div>
+            <li><a href="lesson-4/array_3.php">Array Task 3 easy</a></li>
             <li><a href="lesson-4/cycle_1.php">Cycle Task 1 easy</a></li>
             <li><a href="lesson-4/cycle_2.php">Cycle Task 2 easy</a></li>
+            <li><a href="lesson-4/cycle_3.php">Cycle Task 3 easy</a></li>
+            <li><a href="lesson-4/cycle_4.php">Cycle Task 4 easy</a></li>
         </ul>
     </li>
 
