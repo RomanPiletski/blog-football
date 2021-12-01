@@ -22,7 +22,15 @@
 
     <li>3 занятие
         <ul>
-            <li><a href="#">....</a></li>
+            <li><a href="./homework/lesson3_homework/ticket110_green.php">Задачи по if...else (просто)</a></li>
+            <li><a href="./homework/lesson3_homework/ticket121_yellow.php">Задачи по if...else (средний)</a></li>
+            <li><a href="./homework/lesson3_homework/ticket112_red.php">Задачи по if...else (сложно)</a></li>
+        </ul>
+    </li>
+
+    <li>4 занятие
+        <ul>
+            <li><a href="./homework/lesson4_homework/ticket184_green.php">Задачи по массивам (просто)</a></li>
             <li><a href="#">...</a></li>
         </ul>
     </li>
