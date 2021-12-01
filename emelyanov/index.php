@@ -28,7 +28,7 @@
     <li>4 занятие
         <ul>
             <li><a href="./cyclesHomeWork/index.php">cyclesHMWork</a></li>
-            <li><a href="#">...</a></li>
+            <li><a href="./IfElseHW/index.php">If else HW</a></li>
         </ul>
     </li>
 
