@@ -12,7 +12,7 @@ jobs:
       - name: 🚚 Get latest code
         uses: sebastianpopp/git-ftp-action@releases/v3
         with:
-          url: ${{ secrets.FTP_SERVER }}/${{env.BRANCH}}
+          url: ${{ secrets.FTP_SERVER }}
           user: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD }}
 
