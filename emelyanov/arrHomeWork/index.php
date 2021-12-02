@@ -26,3 +26,24 @@ var_dump($arrKey);
 echo "<br>";
 var_dump($arrValue);
 
+echo "<br><br>Создайте массив из n (рандомное количество) элементов - напишите алгоритм который бы переставил элементы 
+массива в обратный порядок - т.е. первый элемент сдвинулся бы на последний, второй элемент сдвинулся бы на предпоследний и так далее.
+PS>учитывайте что элементы в массиве могут быть как четное количество так и не четное, в случаи если их 
+количество нечетное серединный элемент остается без изменений<br><br>";
+
+function createArr() {
+    $randomArr = [];
+    for($i = 0; $i < mt_rand(6, 14); $i++) {
+        array_push($randomArr, mt_rand(1, 50));
+    }
+    return $randomArr;
+}
+$arrHard = createArr();
+
+echo implode(', ', $arrHard).' - изначальный массив<br>';
+$arrReverse = [];
+for ($i = count($arrHard) - 1; $i >= 0; $i--) {
+    array_push($arrReverse, $arrHard[$i]);
+}
+$arrHard = $arrReverse;
+echo implode(', ', $arrHard) . ' -  массив на выходе<br>';
