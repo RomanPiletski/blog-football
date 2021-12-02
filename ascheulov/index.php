@@ -33,6 +33,8 @@
             <li><a href="./homework/lesson4_homework/ticket184_green.php">Задачи по массивам (просто)</a></li>
             <li><a href="./homework/lesson4_homework/ticket108_red.php">Задачи по массивам (сложно)</a></li>
             <li><a href="./homework/lesson4_homework/ticket175_green.php">Задачи по циклам (просто)</a></li>
+            <li><a href="./homework/lesson4_homework/ticket157_yellow.php">Задачи по циклам (средний)</a></li>
+            <li><a href="./homework/lesson4_homework/ticket167_red.php">Задачи по циклам (сложно)</a></li>
         </ul>
     </li>
 
