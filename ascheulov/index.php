@@ -31,7 +31,7 @@
     <li>4 занятие
         <ul>
             <li><a href="./homework/lesson4_homework/ticket184_green.php">Задачи по массивам (просто)</a></li>
-            <li><a href="#">...</a></li>
+            <li><a href="./homework/lesson4_homework/ticket108_red.php">Задачи по массивам (сложно)</a></li>
         </ul>
     </li>
 
