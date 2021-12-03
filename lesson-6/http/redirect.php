@@ -31,3 +31,9 @@
 
 
 header("Accept-Language: ru-ru,ru;q=0.8,en-us;q=0.5,en;q=0.3");
+
+//Директивы для работы с кешем
+//https://www.php.net/manual/ru/function.header.php
+
+//header("Cache-Control: no-cache, must-revalidate"); // HTTP/1.1
+//header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); // Дата в прошлом
