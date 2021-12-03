@@ -27,7 +27,7 @@
 
 
 //редирект
-header("location: ../files/file-upload.php");
+//header("location: ../files/file-upload.php");
 
 
 header("Accept-Language: ru-ru,ru;q=0.8,en-us;q=0.5,en;q=0.3");
