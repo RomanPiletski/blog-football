@@ -2,4 +2,4 @@
 
 session_start();
 
-echo $_SESSION['counter'];
+unset($_SESSION['hh']);
