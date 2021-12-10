@@ -1,0 +1,35 @@
+{
+  "name": "yana22051994/myshop",
+  "description": "myFrameworkOnPhp",
+  "authors": [
+    {
+      "name": "yana22051994",
+      "email": "andreiocsana@gmail.com"
+    }
+  ],
+  "require": {
+  },
+  "minimum-stability" : "dev",
+  "autoload": {
+    "psr-4": {
+      "App\\" : "./app"
+    },
+    "files": [
+      "helpers/helpers.php"
+    ]
+  },
+  "scripts": {
+    "delete-all-tables": "App\\Migrations\\DeleteTable::deleteAllTables",
+    "create-user-table": "App\\Migrations\\CreateUserTable::up",
+    "update-user-table": "App\\Migrations\\UpdateUserTable::addColumn",
+    "seed-users": "App\\Seeds\\AddUsers::AddUsers",
+    "migrate": [
+      "@composer delete-all-tables",
+      "@composer create-user-table",
+      "@composer update-user-table"
+    ],
+    "seed": [
+      "@composer seed-users"
+    ]
+  }
+}

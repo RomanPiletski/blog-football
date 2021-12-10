@@ -1,0 +1,15 @@
+
+AddDefaultCharset utf-8
+
+php_flag session.auto_start 1
+
+#включаем буфер
+php_flag output_buffering On
+
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule .* index.php [L]
+
+
