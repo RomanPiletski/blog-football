@@ -36,6 +36,11 @@
         <li><a href="Homeworks\lesson_4\cycles\hard.php">Задачи по циклам (hard)</a></li>
         </ul>
     </li>
+    <li>Сессии и куки
+        <ul>
+            <li><a href="">Регистрация и Авторизация</a></li>
+        </ul>
+    </li>
 </ul>
 </body>
 </html>
