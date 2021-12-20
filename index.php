@@ -38,7 +38,7 @@
     </li>
     <li>Сессии и куки
         <ul>
-            <li><a href="">Регистрация и Авторизация</a></li>
+            <li><a href="Homeworks\lesson_6\post-get\index.php">Регистрация и Авторизация</a></li>
         </ul>
     </li>
 </ul>
