@@ -1,0 +1,15 @@
+body{
+    margin: 0 auto;
+    height: 100vh;
+}
+
+#container{
+     display: flex;
+     justify-content: space-around;
+}
+#wrap{
+    width: 100%;
+    display: inline-block;
+    margin: 0 auto;
+    text-align: center;
+}
