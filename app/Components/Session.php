@@ -9,11 +9,12 @@ namespace App\Components;
 class Session
 {
 
+
     /**
      * Устанавливаем ячейку по имени $name c содержимым $value.
      * @param string $name - имя ячейки
      * @param string $value - значение
-     * @return string - возращается установленное значение
+     * @return string - возвращается установленное значение
      */
     public static function set(string $name, string $value): string
     {
