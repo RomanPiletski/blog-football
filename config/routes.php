@@ -12,5 +12,5 @@ return [
     'users/([0-9]+)/store/([0-9]+)' => 'user/list/$1/$2', //где user - имя контроллера, list - имя action, $1/$2 - Набор передаваемых параметров
 
 
-   // '' => 'home/index',
+   '' => 'home/index',
 ];
