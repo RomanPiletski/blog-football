@@ -14,13 +14,15 @@ class CreateUserTable extends Migration
     {
         // sql to create table
 
-        $sql = "CREATE TABLE `{self::TABLE_NAME}`(" .
+        $sql = "CREATE TABLE `users`(" .
             "id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY," .
             "firstname VARCHAR(30) NOT NULL," .
             "lastname VARCHAR(30) NOT NULL," .
             "email VARCHAR(50) NOT NULL UNIQUE," .
             "password VARCHAR(10) NOT NULL" .
             ")";
+
+        (new Db)->getConnection()->query($sql); die;
 
 
         if (!self::tableExist(self::TABLE_NAME)) {

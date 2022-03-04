@@ -8,8 +8,6 @@ namespace App\Components;
  */
 class Session
 {
-
-
     /**
      * Устанавливаем ячейку по имени $name c содержимым $value.
      * @param string $name - имя ячейки

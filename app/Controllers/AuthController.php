@@ -15,6 +15,7 @@ class AuthController
     public function register()
     {
         if (isset($_POST['submit'])) {
+
             $firstname = $_POST['firstname'];
             $lastname = $_POST['lastname'];
             $email = $_POST['email'];
@@ -22,20 +23,20 @@ class AuthController
             $confirm_password = $_POST['confirm_password'];
             $phone = $_POST['phone'];
 
-            $errors = null;//создаю пустой массив, где будут хранится ошибки при вводе некорректных данных в поля регистрации
-            if (!User::checkName($firstname)) $errors[] = "Имя введено некорректно";
-            if (!User::checkName($lastname)) $errors[] = "Фамилия введена некорректно";
+            $errors = [];//создаю пустой массив, где будут хранится ошибки при вводе некорректных данных в поля регистрации
+            //if (!User::checkName($firstname)) $errors[] = "Имя введено некорректно";
+            //if (!User::checkName($lastname)) $errors[] = "Фамилия введена некорректно";
             if (!User::checkEmail($email)) $errors[] = "Электронная почта введена некорректно";
-            if (!User::checkPassword($password)) $errors[] = "Пароль введен некорректно";
+            //if (!User::checkPassword($password)) $errors[] = "Пароль введен некорректно";
             if (!($password === $confirm_password)) $errors[] = "Введенные пароли не совпадают";
-            if (!User::checkPhone($phone)) $errors[] = "Телефон введен некорректно";
+            //if (!User::checkPhone($phone)) $errors[] = "Телефон введен некорректно";
         }
 
         if (empty($errors)) {
             if (User::create($firstname, $lastname, $email, $password, $phone))
             {
                 $user = User::selectByEmail($email);//выбираю данные по email (поле unique)
-                Session::set('email', $user['email']);
+                Session::set('email', $user['email']); //авторизация
                 header('Location: profile');//сразу перенаправляю в созданный профиль
             }
         }
@@ -62,7 +63,9 @@ class AuthController
             Session::set('email', $user['email']);//создаем сессию авторизованному пользователю
             header('Location: profile');
         }
-        else if (!empty($_POST)){//нужно чтобы если поля еще не заполнены ничем - не выводилась ошибка, что неправильный логин/пароль
+
+        else if (!empty($_POST)){
+            //нужно чтобы если поля еще не заполнены ничем - не выводилась ошибка, что неправильный логин/пароль
             echo "Вы ввели неправильный логин или пароль!";
         }
 

@@ -11,7 +11,7 @@ class User
 
     public static function all()
     {
-        $results = Db::getConnection()->query("SELECT id, firstname, lastname, email, phone FROM users");
+        $results = Db::getConnection()->query("SELECT id, firstname, lastname, email FROM users");
         return $results->fetchAll(PDO::FETCH_ASSOC);
     }
 
@@ -34,7 +34,7 @@ class User
     {
         $connect = Db::getConnection();
 
-        $sql = "INSERT INTO user (firstname, lastname, email, password, phone) VALUES (:firstname, :lastname, :email, :password, :phone)";
+        $sql = "INSERT INTO users (firstname, lastname, email, password) VALUES (:firstname, :lastname, :email, :password)";
 
         $result = $connect->prepare($sql);
 
@@ -42,7 +42,6 @@ class User
         $result->bindParam(':lastname', $lastname, PDO::PARAM_STR);
         $result->bindParam(':email', $email, PDO::PARAM_STR);
         $result->bindParam(':password', $password, PDO::PARAM_STR);
-        $result->bindParam(':phone', $phone, PDO::PARAM_STR);
         $result->execute();
 
         return $result->fetch(PDO::FETCH_OBJ);
@@ -84,6 +83,21 @@ class User
         return $result->fetch(PDO::FETCH_ASSOC);
     }
 
+    /**
+     * This is a function for displaying a user by email
+     * @param $email
+     * @return mixed
+     */
+    public static function findById($id)
+    {
+        $connect = Db::getConnection();
+
+        $sql = 'SELECT * FROM users WHERE id = :id';
+        $result = $connect->prepare($sql);
+        $result->bindParam(':id', $id, PDO::PARAM_INT);
+        $result->execute();
+        return $result->fetch(PDO::FETCH_ASSOC);
+    }
 
     /**
      *

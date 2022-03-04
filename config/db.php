@@ -1,8 +1,8 @@
 <?php
 
 return [
-    'host' => 'localhost',
-    'dbname' => 'shop',
+    'host' => '127.0.0.1:3307',
+    'dbname' => 'framework',
     'user' => 'root',
-    'password' => 'root',
+    'password' => '',
 ];

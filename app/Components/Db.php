@@ -22,10 +22,18 @@ class Db
 
         //PDO
         if (self::$connect === null) {
-            $dsn = "mysql:host={$params['host']};dbname={$params['dbname']}";
-            $db = new PDO($dsn, $params['user'], $params['password']);
-            $db->exec("set names utf8");
-            self::$connect = $db;
+
+
+            try {
+                $dsn = "mysql:host={$params['host']};dbname={$params['dbname']}";
+                $db = new PDO($dsn, $params['user'], $params['password']);
+                $db->exec("set names utf8");
+                self::$connect = $db;
+            } catch (\PDOException $exception) {
+                echo $exception->getMessage();
+            }
+
+
         }
 
         return self::$connect;
