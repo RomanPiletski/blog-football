@@ -58,7 +58,7 @@ class Router
                 $actionName = array_shift($segments);
 
                 $controllerObject->{$actionName}($segments);
-                
+
             } else {
 
                 echo "404";
