@@ -2,6 +2,8 @@
 
 namespace App\Components;
 
+use App\Controllers\HomeController;
+
 /**
  * Класс маршрутизатор ROUTER
  *
@@ -22,7 +24,6 @@ class Router
         //после трим trim($_SERVER['REQUEST_URI'], '/') = users/all
 
 
-
         //проверим наличие запроса и возвратим его если есть, иначе возвратим NULL
         //пример если ссылка - http://site.com/sliders/1 - то на выходе эта функция вернет sliders/1
         return (!empty($_SERVER['REQUEST_URI'])) ? trim($_SERVER['REQUEST_URI'], '/') : NULL;
@@ -36,22 +37,41 @@ class Router
         //1. получить строку запроса
         $uri = $this->getURI();
 
-        //формируем имя контроллера
-        $segments = explode('/', $uri); //users/all
 
-        $controllerName = array_shift($segments) . 'Controller'; //Формируем имя контроллера. Функция array_shift — Извлекает первый элемент массива, и возвращает его сокращая размер array на один элемент.
-        $controllerName = ucfirst($controllerName);//Формируем имя контроллера. Функция ucfirst — Преобразует первый символ строки в верхний регистр
+        if (!empty($uri)) {
 
-        //подключить файл класса контроллера
-        $controllerFile = "App\\Controllers\\" . $controllerName;
 
-        //cоздаем экземпляр класса контроллера и запускаем нужный action
-        $controllerObject = new $controllerFile;
+            //формируем имя контроллера
+            $segments = explode('/', $uri); //users/all
 
-        $actionName = array_shift($segments);
+            $controllerName = array_shift($segments) . 'Controller'; //Формируем имя контроллера. Функция array_shift — Извлекает первый элемент массива, и возвращает его сокращая размер array на один элемент.
+            $controllerName = ucfirst($controllerName);//Формируем имя контроллера. Функция ucfirst — Преобразует первый символ строки в верхний регистр
 
-        $controllerObject->{$actionName}($segments);
+            //подключить файл класса контроллера
+            $controllerFile = "App\\Controllers\\" . $controllerName;
 
+            if (class_exists($controllerFile)) {
+                //cоздаем экземпляр класса контроллера и запускаем нужный action
+                $controllerObject = new $controllerFile;
+
+
+                $actionName = array_shift($segments);
+
+                $controllerObject->{$actionName}($segments);
+                
+            } else {
+
+                echo "404";
+            }
+
+
+        } else {
+
+            //cоздаем экземпляр класса контроллера и запускаем нужный action
+            $controllerObject = new HomeController();
+            $actionName = 'index';
+            $controllerObject->{$actionName}([]);
         }
+    }
 
 }

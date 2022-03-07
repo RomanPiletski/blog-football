@@ -23,10 +23,8 @@ class HomeController
      */
     public function index()
     {
-        //$sliders=Slider::all();
 
-
-        require VIEW_ROOT . "home/index.php";
+        echo "Главная страница";
     }
 
 
