@@ -30,7 +30,7 @@ class User
      * @param $phone
      * @return mixed
      */
-    public static function create($firstname, $lastname, $email, $password, $phone)
+    public static function create($firstname, $lastname, $email, $password, $phone = null)
     {
         $connect = Db::getConnection();
 

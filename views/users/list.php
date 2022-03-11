@@ -1,3 +1,12 @@
+<form method="post">
+    <input type="text" name="firstname" placeholder="firstname">
+    <input type="text" name="lastname" placeholder="lastname">
+    <input type="text" name="email" placeholder="email">
+    <input type="password" name="password" placeholder="password">
+    <input type="submit" value="Save">
+</form>
+
+
 <table border="2">
 <caption>Таблица пользователей</caption>
 <tr>
@@ -15,6 +24,9 @@
 
 </tr>
 <? endforeach ?>
+
+
+
 
 </table>
 

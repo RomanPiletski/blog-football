@@ -16,9 +16,14 @@ class CabinetController
     public function __construct()
     {
         //Middlewares
-        UserMiddleware::isAuthorized('email');
+        //UserMiddleware::isAuthorized('email');
     }
 
+
+    public function test()
+    {
+        echo "Hello from cabinet";
+    }
 
     /**
      * This is a function for working with a profile

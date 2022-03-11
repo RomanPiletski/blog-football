@@ -23,9 +23,7 @@ class HomeController
      */
     public function index()
     {
-
         echo "Главная страница";
     }
-
 
 }
