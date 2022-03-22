@@ -2,120 +2,43 @@
 
 namespace App\Models;
 
-use App\Components\Db;
-use PDO;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
+use Laravel\Sanctum\HasApiTokens;
 
-
-class User
+class User extends Authenticatable
 {
-
-    public static function all()
-    {
-        $results = Db::getConnection()->query("SELECT id, firstname, lastname, email FROM users");
-        return $results->fetchAll(PDO::FETCH_ASSOC);
-    }
-
-
-    public static function checkEmail($email)
-    {
-        return preg_match('/.+@.+\..+/', $email);
-    }
+    use HasApiTokens, HasFactory, Notifiable;
 
     /**
-     * Метод по созданию пользователя в системе
-     * @param $firstname
-     * @param $lastname
-     * @param $email
-     * @param $password
-     * @param $phone
-     * @return mixed
-     */
-    public static function create($firstname, $lastname, $email, $password, $phone = null)
-    {
-        $connect = Db::getConnection();
-
-        $sql = "INSERT INTO users (firstname, lastname, email, password) VALUES (:firstname, :lastname, :email, :password)";
-
-        $result = $connect->prepare($sql);
-
-        $result->bindParam(':firstname', $firstname, PDO::PARAM_STR);
-        $result->bindParam(':lastname', $lastname, PDO::PARAM_STR);
-        $result->bindParam(':email', $email, PDO::PARAM_STR);
-        $result->bindParam(':password', $password, PDO::PARAM_STR);
-        $result->execute();
-
-        return $result->fetch(PDO::FETCH_OBJ);
-    }
-
-
-
-    public static function update($firstname, $lastname, $email, $password, $phone)
-    {
-        $connect = Db::getConnection();
-
-        $user = User::selectByEmail($email);
-
-        $sql = 'UPDATE user SET firstname = :firstname, lastname = :lastname, email = :email, password = :password, phone = :phone WHERE id = :user_id;';
-        $result = $connect->prepare($sql);
-        $result->bindParam(':firstname', $firstname, PDO::PARAM_STR);
-        $result->bindParam(':lastname', $lastname, PDO::PARAM_STR);
-        $result->bindParam(':email', $email, PDO::PARAM_STR);
-        $result->bindParam(':password', $password, PDO::PARAM_STR);
-        $result->bindParam(':phone', $phone, PDO::PARAM_STR);
-        $result->bindParam(':user_id', $user['id'], PDO::PARAM_INT);
-
-        return $result->execute();
-    }
-
-    /**
-     * This is a function for displaying a user by email
-     * @param $email
-     * @return mixed
-     */
-    public static function selectByEmail($email)
-    {
-        $connect = Db::getConnection();
-
-        $sql = 'SELECT * FROM user WHERE email = :email';
-        $result = $connect->prepare($sql);
-        $result->bindParam(':email', $email, PDO::PARAM_STR);
-        $result->execute();
-        return $result->fetch(PDO::FETCH_ASSOC);
-    }
-
-    /**
-     * This is a function for displaying a user by email
-     * @param $email
-     * @return mixed
-     */
-    public static function findById($id)
-    {
-        $connect = Db::getConnection();
-
-        $sql = 'SELECT * FROM users WHERE id = :id';
-        $result = $connect->prepare($sql);
-        $result->bindParam(':id', $id, PDO::PARAM_INT);
-        $result->execute();
-        return $result->fetch(PDO::FETCH_ASSOC);
-    }
-
-    /**
+     * The attributes that are mass assignable.
      *
-     * @param string $firstname
-     * @param string $lastname
-     * @param string $password
-     * @return mixed
+     * @var array<int, string>
      */
-    public static function login($email, $password)
-    {
-        $connect = Db::getConnection();
-        $sql = "SELECT * FROM user WHERE email = :email AND password = :password";
-        $result = $connect->prepare($sql);
-        $result->bindParam(':email', $email, PDO::PARAM_STR);
-        $result->bindParam(':password', $password, PDO::PARAM_STR);
-        $result->execute();
-        return $result->fetch(PDO::FETCH_ASSOC);
-    }
+    protected $fillable = [
+        'name',
+        'email',
+        'password',
+    ];
 
+    /**
+     * The attributes that should be hidden for serialization.
+     *
+     * @var array<int, string>
+     */
+    protected $hidden = [
+        'password',
+        'remember_token',
+    ];
 
+    /**
+     * The attributes that should be cast.
+     *
+     * @var array<string, string>
+     */
+    protected $casts = [
+        'email_verified_at' => 'datetime',
+    ];
 }
