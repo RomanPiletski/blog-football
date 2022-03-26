@@ -5,16 +5,13 @@ jobs:
     name: 🎉 Deploy
     runs-on: ubuntu-latest
     steps:
-      - name: Set env.BRANCH
-        run: echo "BRANCH=$(echo $GITHUB_REF | cut -d'/' -f 3)" >> $GITHUB_ENV
-
       - uses: actions/checkout@v1
       - name: 🚚 Get latest code
         uses: sebastianpopp/git-ftp-action@releases/v3
         with:
-          url: ""
-          user: ""
-          password: ""
+          url: "ftp://piletski.beget.tech"
+          user: "piletski_blog"
+          password: "Helloworld101!"
 
       - uses: actions/checkout@v1
       - name: Slack Notification
