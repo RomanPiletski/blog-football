@@ -11,7 +11,7 @@ jobs:
         with:
           url: "ftp://piletski.beget.tech"
           user: "piletski_blog"
-          password: "Helloworld101!"
+          password: ${{ secrets.FTP_PASSWORD_PILETSKI }}
       - uses: actions/checkout@v1
       - name: Slack Notification
         uses: rtCamp/action-slack-notify@v2
