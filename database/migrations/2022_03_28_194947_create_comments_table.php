@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string("slug", 255);
             $table->foreignId("user_id")->constrained("users")->cascadeOnDelete();
             $table->foreignId("post_id")->constrained("posts")->cascadeOnDelete();
-            $table->boolean("is_publish")->default("0");
+            $table->boolean("is_publish")->default(0);
             $table->timestamps();
         });
     }
