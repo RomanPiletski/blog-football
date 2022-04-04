@@ -31,9 +31,9 @@ class Comment extends Model
         $this->save();
     }
 
-    public function togglePublish($value)
+    public function togglePublish()
     {
-        if ($value == null) {
+        if ($this->is_publish == 0) {
             return $this->publish();
         }
         return $this->unpublish();

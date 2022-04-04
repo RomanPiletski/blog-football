@@ -47,9 +47,9 @@ class Post extends Model
         $this->save();
     }
 
-    public function togglePublish($value)
+    public function togglePublish()
     {
-        if ($value == null) {
+        if ($this->is_publish == 0) {
             return $this->publish();
         }
         return $this->unpublish();
@@ -67,9 +67,9 @@ class Post extends Model
         $this->save();
     }
 
-    public function toggleRecommend($value)
+    public function toggleRecommend()
     {
-        if ($value == null) {
+        if ($this->is_recommended == 0) {
             return $this->recommend();
         }
         return $this->unrecommend();
