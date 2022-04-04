@@ -23,7 +23,7 @@ class Post extends Model
 
     public function tags()
     {
-        return $this->belongsToMany(Tags::class, 'post_tag', 'post_id', 'tag_id');
+        return $this->belongsToMany(Tag::class, 'post_tag', 'post_id', 'tag_id');
     }
 
     public function sluggable(): array
@@ -33,6 +33,66 @@ class Post extends Model
                 'source' => 'title'
             ]
         ];
+    }
+
+    public function publish()
+    {
+        $this->is_publish = 1;
+        $this->save();
+    }
+
+    public function unpublish()
+    {
+        $this->is_publish = 0;
+        $this->save();
+    }
+
+    public function togglePublish($value)
+    {
+        if ($value == null) {
+            return $this->publish();
+        }
+        return $this->unpublish();
+    }
+
+    public function recommend()
+    {
+        $this->is_recommended = 1;
+        $this->save();
+    }
+
+    public function unrecommend()
+    {
+        $this->is_recommended = 0;
+        $this->save();
+    }
+
+    public function toggleRecommend($value)
+    {
+        if ($value == null) {
+            return $this->recommend();
+        }
+        return $this->unrecommend();
+    }
+
+    public function scopeRecommended($query)
+    {
+        return $query->where("is_recommended", 1);
+    }
+
+    public function scopeUnrecommended($query)
+    {
+        return $query->where("is_recommended", 0);
+    }
+
+    public function scopePublished($query)
+    {
+        return $query->where("is_publish", 1);
+    }
+
+    public function scopeUnpublished($query)
+    {
+        return $query->where("is_publish", 0);
     }
 }
 
