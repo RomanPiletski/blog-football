@@ -33,7 +33,7 @@ class Comment extends Model
 
     public function togglePublish()
     {
-        if ($this->is_publish == 0) {
+        if ($this->is_publish == false) {
             return $this->publish();
         }
         return $this->unpublish();
@@ -41,11 +41,11 @@ class Comment extends Model
 
     public function scopePublished($query)
     {
-        return $query->where("is_publish", 1);
+        return $query->where("is_publish", true);
     }
 
     public function scopeUnpublished($query)
     {
-        return $query->where("is_publish", 0);
+        return $query->where("is_publish", false);
     }
 }
