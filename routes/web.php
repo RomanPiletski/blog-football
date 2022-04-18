@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get("/admin", [\App\Http\Controllers\Admin\DashboardController::class, "index"]);
 Route::get('/', function () {
 //    echo "Test work!";
     return view('welcome');
