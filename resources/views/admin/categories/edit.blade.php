@@ -21,7 +21,7 @@
                     <h3 class="box-title">Меняем категорию</h3>
                 </div>
                 <div class="box-body">
-                    <form method="POST" action="{{route("admin.categories.update", $category->id)}}">
+                    <form method="POST" action="{{route("admin.categories.update", $category->slug)}}">
                         @csrf
                         @method("PATCH")
                         <div class="col-md-6">
@@ -31,14 +31,13 @@
                                        value="{{$category->title}}">
                             </div>
                         </div>
-                    </form>
                 </div>
                 <!-- /.box-body -->
                 <div class="box-footer">
                     <button class="btn btn-default">Назад</button>
                     <button class="btn btn-warning pull-right">Изменить</button>
                 </div>
-
+                    </form>
 
                 <!-- /.box-footer-->
             </div>

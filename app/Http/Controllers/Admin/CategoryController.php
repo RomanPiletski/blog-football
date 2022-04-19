@@ -36,7 +36,6 @@ class CategoryController extends Controller
 
     public function update(UpdateCategoryRequest $request, Category $category)
     {
-        $category = Category::find($category);
         $category->update($request->validated());
         return redirect()->route("admin.categories.index");
     }
