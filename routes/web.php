@@ -12,7 +12,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+//Route::get("categories/{category:id}", [\App\Http\Controllers\Admin\CategoryController::class, "update"])->name("categories.update");
+Route::resource("/admin/categories", "\App\Http\Controllers\Admin\CategoryController");
 Route::get("/admin", [\App\Http\Controllers\Admin\DashboardController::class, "index"]);
 Route::get('/', function () {
 //    echo "Test work!";
