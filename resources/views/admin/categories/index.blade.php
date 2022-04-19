@@ -43,7 +43,17 @@
                             <tr>
                                 <td>{{"$category->id"}}</td>
                                 <td>{{"$category->title"}}</td>
-                                <td><a href="{{route("categories.edit", $category->id)}}" class="fa fa-pencil"></a> <a href="#" class="fa fa-remove"></a></td>
+                                <td><a href="{{route("categories.edit", $category->id)}}" class="fa fa-pencil"></a>
+
+                                    <form method="POST" action="{{route("categories.destroy", $category->id)}}">
+                                        @csrf
+                                        @method("DELETE")
+                                        <button onclick="return confirm('Are you sure?')" type="submit" class="delete">
+                                            <a class="fa fa-remove"></a>
+                                        </button>
+                                    </form>
+
+                                </td>
                             </tr>
                         @endforeach
                         </tfoot>

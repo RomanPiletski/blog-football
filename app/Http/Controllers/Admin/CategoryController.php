@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Admin\DestroyCategoryRequest;
 use App\Http\Requests\Admin\IndexCategoryRequest;
 use App\Http\Requests\Admin\StoreCategoryRequest;
 use App\Http\Requests\Admin\UpdateCategoryRequest;
@@ -36,9 +37,14 @@ class CategoryController extends Controller
 
     public function update(UpdateCategoryRequest $request, $id)
     {
-//        dd("1");
         $category = Category::find($id);
         $category->update($request->validated());
+        return redirect()->route("categories.index");
+    }
+
+    public function destroy(DestroyCategoryRequest $request, $id)
+    {
+        Category::find($id)->delete();
         return redirect()->route("categories.index");
     }
 }
