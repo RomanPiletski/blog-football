@@ -17,7 +17,7 @@
 
             <!-- Default box -->
             <div class="box">
-                <form method="POST" action="{{route("categories.store")}}">
+                <form method="POST" action="{{route("admin.categories.store")}}">
                     @csrf
                     @method("POST")
                     <div class="box-header with-border">
