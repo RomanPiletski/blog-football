@@ -13,23 +13,23 @@ class CategorySeeder extends Seeder
         DB::table("categories")->insert([
             [
                 "title" => "Категория 1",
-                "slug" => "category_1",
+                "slug" => "category-1",
             ],
             [
                 "title" => "Категория 2",
-                "slug" => "category_2",
+                "slug" => "category-2",
             ],
             [
                 "title" => "Категория 3",
-                "slug" => "category_3",
+                "slug" => "category-3",
             ],
             [
                 "title" => "Категория 4",
-                "slug" => "category_4",
+                "slug" => "category-4",
             ],
             [
                 "title" => "Категория 5",
-                "slug" => "category_5",
+                "slug" => "category-5",
             ],
         ]);
     }
