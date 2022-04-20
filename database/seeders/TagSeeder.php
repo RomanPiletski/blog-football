@@ -13,23 +13,23 @@ class TagSeeder extends Seeder
         DB::table('tags')->insert([
             [
                 'title' => 'Тег 1',
-                'slug' => 'teg_1',
+                'slug' => 'teg-1',
             ],
             [
                 'title' => 'Тег 2',
-                'slug' => 'teg_2',
+                'slug' => 'teg-2',
             ],
             [
                 'title' => 'Тег 3',
-                'slug' => 'teg_3',
+                'slug' => 'teg-3',
             ],
             [
                 'title' => 'Тег 4',
-                'slug' => 'teg_4',
+                'slug' => 'teg-4',
             ],
             [
                 'title' => 'Тег 5',
-                'slug' => 'teg_5',
+                'slug' => 'teg-5',
             ],
         ]);
     }

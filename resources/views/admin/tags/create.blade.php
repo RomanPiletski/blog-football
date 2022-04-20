@@ -7,7 +7,7 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                Добавить категорию
+                Добавить тег
                 <small>приятные слова..</small>
             </h1>
         </section>
@@ -17,11 +17,11 @@
 
             <!-- Default box -->
             <div class="box">
-                <form method="POST" action="{{route("admin.categories.store")}}">
+                <form method="POST" action="{{route("admin.tags.store")}}">
                     @csrf
                     @method("POST")
                     <div class="box-header with-border">
-                        <h3 class="box-title">Добавляем категорию</h3>
+                        <h3 class="box-title">Добавляем тег</h3>
                         @include("admin.errors")
                     </div>
                     <div class="box-body">
@@ -34,7 +34,7 @@
                     </div>
                     <!-- /.box-body -->
                     <div class="box-footer">
-                        <a href="{{route("admin.categories.index")}}" class="btn btn-default">Назад</a>
+                        <a href="{{route("admin.tags.index")}}" class="btn btn-default">Назад</a>
                         <button class="btn btn-success pull-right">Добавить</button>
                     </div>
                     <!-- /.box-footer-->
