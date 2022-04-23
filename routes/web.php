@@ -3,16 +3,6 @@
 use App\Http\Controllers\Admin\CategoryController;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 Route::group(["prefix" => "admin"], function (){
     Route::resource("categories", CategoryController::class)->parameters([
         'categories' => "category:slug"
@@ -25,9 +15,6 @@ Route::group(["prefix" => "admin"], function (){
         'update' => 'admin.categories.update',
         'destroy' => 'admin.categories.destroy'
     ]);
-});
-
-Route::group(["prefix" => "admin"], function (){
     Route::resource("tags", \App\Http\Controllers\Admin\TagController::class)->parameters([
         'tags' => "tag:slug"
     ])->names([
@@ -38,6 +25,17 @@ Route::group(["prefix" => "admin"], function (){
         'store' => 'admin.tags.store',
         'update' => 'admin.tags.update',
         'destroy' => 'admin.tags.destroy'
+    ]);
+    Route::resource("users", \App\Http\Controllers\Admin\UserController::class)->parameters([
+        'users' => "user"
+    ])->names([
+        'edit' => 'admin.users.edit',
+        'create' => 'admin.users.create',
+        'show' => 'admin.users.show',
+        'index' => 'admin.users.index',
+        'store' => 'admin.users.store',
+        'update' => 'admin.users.update',
+        'destroy' => 'admin.users.destroy'
     ]);
 });
 

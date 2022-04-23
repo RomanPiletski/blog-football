@@ -29,11 +29,6 @@ class TagController extends Controller
         return redirect()->route("admin.tags.index");
     }
 
-    public function show($id)
-    {
-        //
-    }
-
     public function edit(Tag $tag)
     {
         return view("admin.tags.edit", ["tag" => $tag]);
