@@ -17,7 +17,7 @@ class StoreUserRequest extends FormRequest
         return [
             "name" => "string|max:255",
             "email" => "string|email|unique:users",
-            "password" => "required",
+            "password" => "required|string",
             "avatar" => "image|max:2048",
         ];
     }
