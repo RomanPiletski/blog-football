@@ -45,17 +45,27 @@ class User extends Authenticatable
         return $this->hasMany(Comment::class);
     }
 
-    protected function password(): Attribute
-    {
-        return Attribute::make(
-            get: fn($value) => $value,
+//    protected function password(): Attribute
+//    {
+//        return Attribute::make(
+//            get: fn($value) => $value,
+//
+//            set: function ($value){
+//                if($value !== null)
+//                    return Hash::make($value);
+//                else return $this->password;
+//            },
+//        );
+//    }
 
-            set: function ($value){
-                if($value !== null)
-                    return Hash::make($value);
-                else return $this->password;
-            },
-        );
+    public function setPasswordAttribute($value)
+    {
+        if ($value != null) $this->attributes['password'] = bcrypt($value);
+    }
+
+    public function getPasswordAttribute($value)
+    {
+        return $value;
     }
 
     public function setAvatarAttribute($value)

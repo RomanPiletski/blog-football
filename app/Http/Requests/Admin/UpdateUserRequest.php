@@ -18,7 +18,7 @@ class UpdateUserRequest extends FormRequest
             "name" => "required|string|max:255",
             "email" => "string|email",
             "avatar" => "image|max:2048",
-            "password" => "nullable",
+            "password" => "nullable|string",
         ];
     }
 }
