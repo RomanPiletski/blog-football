@@ -53,6 +53,7 @@ class User extends Authenticatable
             set: function ($value){
                 if($value !== null)
                     return Hash::make($value);
+                else return $this->password;
             },
         );
     }
