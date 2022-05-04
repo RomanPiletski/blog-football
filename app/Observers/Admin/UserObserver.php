@@ -3,6 +3,7 @@
 namespace App\Observers\Admin;
 
 use App\Models\User;
+use App\Notifications\SingUpNotification;
 use Illuminate\Support\Facades\Storage;
 
 class UserObserver
@@ -10,7 +11,11 @@ class UserObserver
 
     public function created(User $user)
     {
-        //
+        $admins = User::where("is_admin", true)->get();
+
+        foreach ($admins as $admin) {
+            $admin->notify(new SingUpNotification($user));
+        }
     }
 
     public function updated(User $user)

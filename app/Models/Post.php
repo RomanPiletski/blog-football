@@ -14,6 +14,8 @@ class Post extends Model
     use Sluggable;
 
     const NO_IMAGE = '/uploads/no-image.png';
+
+
     public function category()
     {
         return $this->belongsTo(Category::class);
