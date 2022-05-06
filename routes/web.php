@@ -51,7 +51,8 @@ Route::group(["prefix" => "admin"], function (){
 });
 
 Route::get("/admin", [\App\Http\Controllers\Admin\DashboardController::class, "index"])->name("admin.dashboard");
-Route::get('/', function () {
+Route::get('/', [\App\Http\Controllers\HomeController::class, "index"]);
+//Route::get('/', function () {
 //    echo "Test work!";
-    return view('welcome');
-});
+//    return view('welcome');
+//});

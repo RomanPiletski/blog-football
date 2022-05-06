@@ -13,8 +13,11 @@ class Post extends Model
     use HasFactory;
     use Sluggable;
 
-    const NO_IMAGE = '/uploads/no-image.png';
+    const NO_IMAGE = 'uploads/no-image.png';
 
+    protected $fillable = [
+        "title"
+    ];
 
     public function category()
     {
@@ -23,7 +26,7 @@ class Post extends Model
 
     public function author()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class, "user_id");
     }
 
     public function tags()
@@ -102,13 +105,13 @@ class Post extends Model
 
     public function setImageAttribute($value)
     {
+
         if ($value instanceof UploadedFile) {
 
             if ($this->image !== null && Storage::exists($this->image)) {
                 Storage::delete($this->image);
             }
-
-            return $value->store('uploads');
+            $this->attributes["image"] = $value->store("uploads");
         }
     }
 
@@ -116,6 +119,21 @@ class Post extends Model
     {
         return $value ?? self::NO_IMAGE;
     }
+
+    public function getCategoryTitle()
+    {
+        return ($this->category != null)
+            ? $this->category->title
+            : "Нет категории";
+    }
+
+    public function getTagsTitle()
+    {
+        return (!$this->tags->isEmpty())
+            ? implode(', ', $this->tags->pluck('title')->all())
+            : "Нет тегов";
+    }
+
 }
 
 

@@ -49,8 +49,8 @@
                             <td>{{$post->id}}</td>
                             <td>{{$post->title}}
                             </td>
-                            <td>Обучение</td>
-                            <td>Laravel, PHP</td>
+                            <td>{{$post->getCategoryTitle()}}</td>
+                            <td>{{$post->getTagsTitle()}}</td>
                             <td>
                                 <img src="{{asset("storage/". $post->image)}}" alt="post-image" width="100">
                             </td>
