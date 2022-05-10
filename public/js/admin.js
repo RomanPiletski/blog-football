@@ -3070,7 +3070,11 @@ function _init(){
 })(jQuery, $.AdminLTE);
 
 $(document).ready(function (){
-	$("#example1").DataTable();
+    $("#example1").DataTable({
+        "paging":   false,
+        "ordering": false,
+        "info":     false
+    });
 	$(".select2").select2();
     //Date picker
     $('#datepicker').datepicker({
