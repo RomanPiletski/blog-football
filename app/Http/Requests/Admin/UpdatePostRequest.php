@@ -21,9 +21,9 @@ class UpdatePostRequest extends FormRequest
             'image' => 'image',
             'tags' => 'array',
             'tags.*' => 'exists:tags,id',
-            'is_publish' => 'nullable',
-            'is_recommended' => 'nullable',
-            'user_id' => 'nullable',
+            'is_publish' => 'required|nullable',
+            'is_recommended' => 'required|nullable',
+            'user_id' => 'required|nullable',
         ];
     }
 
