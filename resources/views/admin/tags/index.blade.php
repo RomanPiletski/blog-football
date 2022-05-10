@@ -56,6 +56,7 @@
                         @endforeach
                         </tfoot>
                     </table>
+                    {{$tags->links()}}
                 </div>
                 <!-- /.box-body -->
             </div>

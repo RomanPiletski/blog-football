@@ -14,7 +14,7 @@ class CategoryController extends Controller
 {
     public function index(IndexCategoryRequest $request)
     {
-        $categories = Category::all();
+        $categories = Category::paginate("3");
         return view("admin.categories.index", ["categories" => $categories]);
     }
 

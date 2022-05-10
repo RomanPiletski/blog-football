@@ -62,7 +62,9 @@
                         @endforeach
                         </tfoot>
                     </table>
+                    {{$users->links()}}
                 </div>
+
                 <!-- /.box-body -->
             </div>
             <!-- /.box -->

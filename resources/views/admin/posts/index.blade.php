@@ -66,6 +66,7 @@
                         @endforeach
                         </tfoot>
                     </table>
+                    {{$posts->links()}}
                 </div>
                 <!-- /.box-body -->
             </div>

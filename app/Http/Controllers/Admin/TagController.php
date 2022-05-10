@@ -14,7 +14,7 @@ class TagController extends Controller
 
     public function index()
     {
-        $tags = Tag::all();
+        $tags = Tag::paginate("3");
         return view("admin.tags.index", ["tags" => $tags]);
     }
 

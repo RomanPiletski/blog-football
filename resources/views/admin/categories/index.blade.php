@@ -58,6 +58,7 @@
                         @endforeach
                         </tfoot>
                     </table>
+                    {{$categories->links()}}
                 </div>
                 <!-- /.box-body -->
             </div>

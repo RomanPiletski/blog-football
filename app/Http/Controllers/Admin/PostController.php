@@ -16,7 +16,7 @@ class PostController extends Controller
 
     public function index()
     {
-        $posts = Post::all();
+        $posts = Post::paginate("3");
         return view("admin.posts.index", ["posts" => $posts]);
     }
 
@@ -28,8 +28,7 @@ class PostController extends Controller
     public function store(StorePostRequest $request, Post $post)
     {
         $post = Post::create($request->validated());
-        $post->category($request->get("category_id"));
-        $post->tags($request->get("tags"));
+        $post->tags()->sync($request->tags);
         return redirect()->route("admin.posts.index");
     }
 

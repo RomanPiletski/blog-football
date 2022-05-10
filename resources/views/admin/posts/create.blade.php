@@ -53,7 +53,7 @@
                                 <label>Теги</label>
                                 <select name="tags[]" class="form-control select2" multiple="multiple"
                                         data-placeholder="Выберите теги" style="width: 100%;">
-                                    @foreach($tags  as $tag)
+                                    @foreach($tags as $tag)
                                         <option value="{{$tag->id}}">{{$tag->title}}</option>
                                     @endforeach
                                 </select>

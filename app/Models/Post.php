@@ -16,7 +16,14 @@ class Post extends Model
     const NO_IMAGE = 'uploads/no-image.png';
 
     protected $fillable = [
-        "title"
+        "title",
+        "content",
+        "image",
+        "is_publish",
+        "is_recommended",
+        "category_id",
+        "user_id",
+        "description",
     ];
 
     public function category()
