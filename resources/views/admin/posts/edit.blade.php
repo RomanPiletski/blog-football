@@ -13,7 +13,7 @@
 
     <!-- Main content -->
     <section class="content">
-      <form action="{{route('admin.posts.update', $post->id)}}" method="POST" enctype="multipart/form-data">
+      <form action="{{route('admin.posts.update', $post->slug)}}" method="POST" enctype="multipart/form-data">
       @csrf
       @method("PATCH")
       <!-- Default box -->

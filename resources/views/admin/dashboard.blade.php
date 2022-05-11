@@ -10,7 +10,6 @@
                 <small>приятные слова..</small>
             </h1>
         </section>
-
         <!-- Main content -->
         <section class="content">
 
@@ -25,6 +24,10 @@
                 <!-- /.box-body -->
                 <div class="box-footer">
                     и здесь есть место для какого-нибудь текста
+                </div>
+                <div>Погода: {{$weather->coordinates()->getCityName()}}
+                    {{round($weather->temperature()->getCurrentTemperature())}}
+                    <img src="{{asset("storage/img/weather/". $weather->cloudiness()->getIcon() . "@2x.png")}}">
                 </div>
                 <!-- /.box-footer-->
             </div>

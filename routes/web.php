@@ -3,7 +3,7 @@
 use App\Http\Controllers\Admin\CategoryController;
 use Illuminate\Support\Facades\Route;
 
-Route::group(["prefix" => "admin"], function (){
+Route::group(["prefix" => "admin"], function () {
     Route::resource("categories", CategoryController::class)->parameters([
         'categories' => "category:slug"
     ])->names([
@@ -37,17 +37,18 @@ Route::group(["prefix" => "admin"], function (){
         'update' => 'admin.users.update',
         'destroy' => 'admin.users.destroy'
     ]);
-    Route::resource("posts", \App\Http\Controllers\Admin\PostController::class)->parameters([
-        'posts' => "post:slug"
-    ])->names([
-        'edit' => 'admin.posts.edit',
-        'create' => 'admin.posts.create',
-        'show' => 'admin.posts.show',
-        'index' => 'admin.posts.index',
-        'store' => 'admin.posts.store',
-        'update' => 'admin.posts.update',
-        'destroy' => 'admin.posts.destroy'
-    ]);
+    Route::resource("posts", \App\Http\Controllers\Admin\PostController::class)
+        ->parameters([
+            'posts' => "post:slug"
+        ])->names([
+            'edit' => 'admin.posts.edit',
+            'create' => 'admin.posts.create',
+            'show' => 'admin.posts.show',
+            'index' => 'admin.posts.index',
+            'store' => 'admin.posts.store',
+            'update' => 'admin.posts.update',
+            'destroy' => 'admin.posts.destroy'
+        ]);
 });
 
 Route::get("/admin", [\App\Http\Controllers\Admin\DashboardController::class, "index"])->name("admin.dashboard");
