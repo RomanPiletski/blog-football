@@ -6,15 +6,16 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\StoreUserRequest;
 use App\Http\Requests\Admin\UpdateUserRequest;
 use App\Models\User;
+use App\Services\Weather\Interfaces\WeatherServiceContract;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
 
-    public function index()
+    public function index(WeatherServiceContract $weather)
     {
         $users = User::paginate("3");
-        return view("admin.users.index", ["users" => $users]);
+        return view("admin.users.index", ["users" => $users, "weather" => $weather]);
     }
 
     public function create()
