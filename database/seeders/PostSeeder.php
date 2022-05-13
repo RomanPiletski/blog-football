@@ -14,7 +14,7 @@ class PostSeeder extends Seeder
         DB::table('posts')->insert([
             [
                 'title' => 'Пост 1',
-                'slug' => 'post_1',
+                'slug' => 'post-1',
                 'content' => 'Контент пост 1',
                 'category_id' => 1,
                 'user_id' => 1,
@@ -25,7 +25,7 @@ class PostSeeder extends Seeder
             ],
             [
                 'title' => 'Пост 2',
-                'slug' => 'post_2',
+                'slug' => 'post-2',
                 'content' => 'Контент пост 2',
                 'category_id' => 2,
                 'user_id' => 2,
@@ -36,7 +36,7 @@ class PostSeeder extends Seeder
             ],
             [
                 'title' => 'Пост 3',
-                'slug' => 'post_3',
+                'slug' => 'post-3',
                 'content' => 'Контент пост 3',
                 'category_id' => 3,
                 'user_id' => 3,
@@ -47,7 +47,7 @@ class PostSeeder extends Seeder
             ],
             [
                 'title' => 'Пост 4',
-                'slug' => 'post_4',
+                'slug' => 'post-4',
                 'content' => 'Контент пост 4',
                 'category_id' => 4,
                 'user_id' => 4,
@@ -58,7 +58,7 @@ class PostSeeder extends Seeder
             ],
             [
                 'title' => 'Пост 5',
-                'slug' => 'post_5',
+                'slug' => 'post-5',
                 'content' => 'Контент пост 5',
                 'category_id' => 5,
                 'user_id' => 5,
