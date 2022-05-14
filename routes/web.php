@@ -52,7 +52,8 @@ Route::group(["prefix" => "admin"], function () {
 });
 
 Route::get("/admin", [\App\Http\Controllers\Admin\DashboardController::class, "index"])->name("admin.dashboard");
-Route::get('/', [\App\Http\Controllers\HomeController::class, "index"]);
+Route::get('/', [\App\Http\Controllers\HomeController::class, "index"])->name("blog");
+Route::get('/post/{slug}', [\App\Http\Controllers\HomeController::class, "show"])->name("post.show");
 //Route::get('/', function () {
 //    echo "Test work!";
 //    return view('welcome');

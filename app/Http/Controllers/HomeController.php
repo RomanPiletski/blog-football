@@ -12,7 +12,12 @@ class HomeController extends Controller
     public function index(WeatherServiceContract $weather)
     {
         $posts = Post::paginate(2);
-
         return view("pages.index", ["posts" => $posts, "weather" => $weather]);
+    }
+
+    public function show($slug)
+    {
+        $post = Post::where("slug", $slug)->firstOrFail();
+        return view("pages.show", ["post" => $post]);
     }
 }
