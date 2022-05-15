@@ -21,8 +21,9 @@
                                 </div>
                                 <div class="post-content">
                                     <header class="entry-header text-center text-uppercase">
-                                        <h6><a href="{{route("category.show", $post->category->slug)}}">{{$post->getCategoryTitle()}}</a></h6>
-
+                                        @if($post->hasCategory())
+                                            <h6><a href="{{route("category.show", $post->category->slug)}}">{{$post->getCategoryTitle()}}</a></h6>
+                                        @endif
                                         <h1 class="entry-title"><a href="{{route("post.show", $post->slug)}}">{{$post->title}}</a></h1>
 
 

@@ -164,8 +164,14 @@ class Post extends Model
         return self::find("$postID");
     }
 
-    public function related(){
+    public function related()
+    {
         return self::all()->except($this->id);
+    }
+
+    public function hasCategory()
+    {
+        return $this->category != null ? true : false;
     }
 }
 
