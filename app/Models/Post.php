@@ -173,6 +173,22 @@ class Post extends Model
     {
         return $this->category != null ? true : false;
     }
+
+    public static function getPopularPosts()
+    {
+        return self::orderBy("views", "desc")->take(3)->get();
+    }
+
+    public static function getFeaturedPosts()
+    {
+        return self::where("is_recommended", 1)->take(3)->get();
+    }
+
+    public static function getRecentPosts()
+    {
+        return self::orderBy("created_at", "desc")->take(4)->get();
+    }
+
 }
 
 

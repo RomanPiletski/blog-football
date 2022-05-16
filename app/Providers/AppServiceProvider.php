@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Models\Category;
+use App\Models\Post;
 use App\Models\User;
 use App\Observers\Admin\UserObserver;
 use App\Services\Weather\Interfaces\WeatherServiceContract;
@@ -19,6 +21,12 @@ class AppServiceProvider extends ServiceProvider
 
     public function boot()
     {
+        view()->composer("pages._sidebar", function($view){
+            $view->with("popularPosts", Post::getPopularPosts());
+            $view->with("featuredPosts", Post::getFeaturedPosts());
+            $view->with("recentPosts", Post::getRecentPosts());
+            $view->with("categories", Category::all());
+        });
         Paginator::useBootstrapFour();
     }
 }
