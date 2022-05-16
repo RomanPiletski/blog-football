@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\CategoryController;
 use Illuminate\Support\Facades\Route;
 
@@ -56,6 +57,7 @@ Route::get('/', [\App\Http\Controllers\HomeController::class, "index"])->name("b
 Route::get('/post/{slug}', [\App\Http\Controllers\HomeController::class, "show"])->name("post.show");
 Route::get('/tag/{slug}', [\App\Http\Controllers\HomeController::class, "tag"])->name("tag.show");
 Route::get('/category/{slug}', [\App\Http\Controllers\HomeController::class, "category"])->name("category.show");
+Route::get("/register", [AuthController::class, "registerForm"]);
 
 //Route::get('/', function () {
 //    echo "Test work!";
