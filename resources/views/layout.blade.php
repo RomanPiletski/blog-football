@@ -49,7 +49,7 @@
                 </ul>
 
                 <ul class="nav navbar-nav text-uppercase pull-right">
-                    <li><a href="#">Register</a></li>
+                    <li><a href="{{route("register")}}">Register</a></li>
                     <li><a href="about-me.html">Login</a></li>
                     <li><a href="contact.html">My profile</a></li>
                 </ul>
