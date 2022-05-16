@@ -26,6 +26,7 @@ class AppServiceProvider extends ServiceProvider
             $view->with("featuredPosts", Post::getFeaturedPosts());
             $view->with("recentPosts", Post::getRecentPosts());
             $view->with("categories", Category::all());
+            $view->with("weather", WeatherServiceContract::class);
         });
         Paginator::useBootstrapFour();
     }
