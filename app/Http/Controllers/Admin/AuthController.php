@@ -8,8 +8,8 @@ use Illuminate\Http\Request;
 
 class AuthController extends Controller
 {
-    public function registerForm()
+    public function registerForm(WeatherServiceContract $weather)
     {
-    return view("pages.register");
+    return view("pages.register", ["weather" => $weather]);
     }
 }
