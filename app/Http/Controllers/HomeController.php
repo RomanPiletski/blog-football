@@ -13,7 +13,7 @@ class HomeController extends Controller
 {
     public function index(WeatherServiceContract $weather)
     {
-        $posts = Post::paginate(2);
+        $posts = Post::orderBy("created_at", "desc")->paginate(2);
 
         return view("pages.index", [
             "posts" => $posts,
