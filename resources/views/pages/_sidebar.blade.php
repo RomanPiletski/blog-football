@@ -30,7 +30,8 @@
 
                 <div class="p-content">
                     <a href="#" class="text-uppercase">{{$post->title}}</a>
-                    <span class="p-date">February 15, 2016</span>
+                    <span class="p-date">February 15, 2016</span><br>
+                    <span class="p-date">{{$post->views}} просмотров</span>
 
                 </div>
             </div>
