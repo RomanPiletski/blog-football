@@ -33,7 +33,7 @@
                                         </p>
 
                                         <div class="social-share">
-                                            <span class="social-share-title pull-left text-capitalize">By Rubel On February 12, 2016</span>
+                                            <span class="social-share-title pull-left text-capitalize">By Rubel On {{$post->created_at->format("F j\, Y")}}</span>
                                         </div>
                                     </div>
                                 </div>

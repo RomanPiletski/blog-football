@@ -34,7 +34,7 @@
                                 </div>
                             </div>
                             <div class="social-share">
-                                <span class="social-share-title pull-left text-capitalize">By <a href="#">Rubel</a> On February 12, 2016<br>
+                                <span class="social-share-title pull-left text-capitalize">By <a href="#">Rubel</a> On {{$post->created_at->format("F j\, Y")}}<br>
                                     <span class="p-date">{{$post->views}} просмотров</span></span>
                                 <ul class="text-center pull-right">
                                     <li><a class="s-facebook" href="#"><i class="fa fa-facebook"></i></a></li>
