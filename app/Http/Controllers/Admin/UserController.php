@@ -12,10 +12,10 @@ use Illuminate\Http\Request;
 class UserController extends Controller
 {
 
-    public function index(WeatherServiceContract $weather)
+    public function index()
     {
         $users = User::paginate("3");
-        return view("admin.users.index", ["users" => $users, "weather" => $weather]);
+        return view("admin.users.index", ["users" => $users]);
     }
 
     public function create()

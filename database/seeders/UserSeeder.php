@@ -29,7 +29,7 @@ class UserSeeder extends Seeder
                 "email" => "admin@mail.ru",
                 "password" => "admin",
                 "avatar" => "uploads/admin.jpg",
-                "is_admin" => false
+                "is_admin" => true
             ],
             [
                 "name" => "User1",
