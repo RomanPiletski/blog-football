@@ -12,49 +12,49 @@ class UserSeeder extends Seeder
         DB::table("users")->insert([
             [
                 "name" => "super_admin",
-                "email" => "super_admin@mail.ru",
+                "email" => "romchikdcclub@gmail.com",
                 "password" => "super_admin",
                 "avatar" => "uploads/super_admin.jpg",
                 "is_admin" => true
             ],
             [
                 "name" => "super_admin jr",
-                "email" => "super_admin_jr@mail.ru",
+                "email" => "romchikdcclub@gmail.com",
                 "password" => "super_admin_jr",
                 "avatar" => "uploads/super_admin_jr.jpg",
                 "is_admin" => true
             ],
             [
                 "name" => "admin",
-                "email" => "admin@mail.ru",
+                "email" => "romchikdcclub@gmail.com",
                 "password" => "admin",
                 "avatar" => "uploads/admin.jpg",
                 "is_admin" => true
             ],
             [
                 "name" => "User1",
-                "email" => "User1@mail.ru",
+                "email" => "romchikdcclub@gmail.com",
                 "password" => "password",
                 "avatar" => "uploads/user1-128x128.jpg",
                 "is_admin" => false
             ],
             [
                 "name" => "User2",
-                "email" => "User2@mail.ru",
+                "email" => "romchikdcclub@gmail.com",
                 "password" => "password",
                 "avatar" => "uploads/user2-160x160.jpg",
                 "is_admin" => false
             ],
             [
                 "name" => "User3",
-                "email" => "User3@mail.ru",
+                "email" => "romchikdcclub@gmail.com",
                 "password" => "password",
                 "avatar" => "uploads/user3-128x128.jpg",
                 "is_admin" => false
             ],
             [
                 "name" => "User4",
-                "email" => "User4@mail.ru",
+                "email" => "romchikdcclub@gmail.com",
                 "password" => "password",
                 "avatar" => "uploads/user4-128x128.jpg",
                 "is_admin" => false
