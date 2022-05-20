@@ -36,7 +36,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html"><img src="/images/logo.png" alt=""></a>
+                <a class="navbar-brand" href="{{route("blog")}}"><img src="/images/logo.png" alt=""></a>
             </div>
 
 
@@ -49,9 +49,13 @@
                 </ul>
 
                 <ul class="nav navbar-nav text-uppercase pull-right">
+                    @if(Auth::check())
+                        <li><a href="/profile">My profile</a></li>
+                        <li><a href="{{route("logout")}}">Logout</a></li>
+                    @else
                     <li><a href="{{route("registerForm")}}">Register</a></li>
-                    <li><a href="about-me.html">Login</a></li>
-                    <li><a href="contact.html">My profile</a></li>
+                    <li><a href="{{route("loginForm")}}">Login</a></li>
+                    @endif
                 </ul>
 
             </div>
