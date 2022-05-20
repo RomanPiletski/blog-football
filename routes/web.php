@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Admin\TagController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\HomeController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 Route::group(["prefix" => "admin", 'middleware' => ['can:admin_panel']], function () {
@@ -60,6 +61,7 @@ Route::group(["prefix" => "admin", 'middleware' => ['can:admin_panel']], functio
         ]);
 });
 
+Auth::routes(['verify' => true]);
 //Route::get("/admin", [\App\Http\Controllers\Admin\DashboardController::class, "index"])->name("admin.dashboard");
 Route::get('/', [HomeController::class, "index"])->name("blog");
 Route::get('/post/{slug}', [HomeController::class, "show"])->name("post.show");
