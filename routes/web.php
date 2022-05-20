@@ -2,9 +2,17 @@
 
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\PostController;
+use App\Http\Controllers\Admin\TagController;
+use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
-Route::group(["prefix" => "admin"], function () {
+Route::group(["prefix" => "admin", 'middleware' => ['can:admin_panel']], function () {
+
+    Route::get("/", [DashboardController::class, "index"])->name("admin.dashboard");
+
     Route::resource("categories", CategoryController::class)->parameters([
         'categories' => "category:slug"
     ])->names([
@@ -16,7 +24,7 @@ Route::group(["prefix" => "admin"], function () {
         'update' => 'admin.categories.update',
         'destroy' => 'admin.categories.destroy'
     ]);
-    Route::resource("tags", \App\Http\Controllers\Admin\TagController::class)->parameters([
+    Route::resource("tags", TagController::class)->parameters([
         'tags' => "tag:slug"
     ])->names([
         'edit' => 'admin.tags.edit',
@@ -27,7 +35,7 @@ Route::group(["prefix" => "admin"], function () {
         'update' => 'admin.tags.update',
         'destroy' => 'admin.tags.destroy'
     ]);
-    Route::resource("users", \App\Http\Controllers\Admin\UserController::class)->parameters([
+    Route::resource("users", UserController::class)->parameters([
         'users' => "user"
     ])->names([
         'edit' => 'admin.users.edit',
@@ -38,7 +46,7 @@ Route::group(["prefix" => "admin"], function () {
         'update' => 'admin.users.update',
         'destroy' => 'admin.users.destroy'
     ]);
-    Route::resource("posts", \App\Http\Controllers\Admin\PostController::class)
+    Route::resource("posts", PostController::class)
         ->parameters([
             'posts' => "post:slug"
         ])->names([
@@ -52,11 +60,11 @@ Route::group(["prefix" => "admin"], function () {
         ]);
 });
 
-Route::get("/admin", [\App\Http\Controllers\Admin\DashboardController::class, "index"])->name("admin.dashboard");
-Route::get('/', [\App\Http\Controllers\HomeController::class, "index"])->name("blog");
-Route::get('/post/{slug}', [\App\Http\Controllers\HomeController::class, "show"])->name("post.show");
-Route::get('/tag/{slug}', [\App\Http\Controllers\HomeController::class, "tag"])->name("tag.show");
-Route::get('/category/{slug}', [\App\Http\Controllers\HomeController::class, "category"])->name("category.show");
+//Route::get("/admin", [\App\Http\Controllers\Admin\DashboardController::class, "index"])->name("admin.dashboard");
+Route::get('/', [HomeController::class, "index"])->name("blog");
+Route::get('/post/{slug}', [HomeController::class, "show"])->name("post.show");
+Route::get('/tag/{slug}', [HomeController::class, "tag"])->name("tag.show");
+Route::get('/category/{slug}', [HomeController::class, "category"])->name("category.show");
 Route::get("/register", [AuthController::class, "registerForm"])->name("registerForm");
 Route::post("/register", [AuthController::class, "register"])->name("register");
 Route::get('/login', [AuthController::class, 'loginForm'])->name('loginForm');
