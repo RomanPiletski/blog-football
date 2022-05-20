@@ -7,6 +7,7 @@ use App\Http\Requests\Admin\StoreUserRequest;
 use App\Http\Requests\Admin\UpdateUserRequest;
 use App\Models\User;
 use App\Services\Weather\Interfaces\WeatherServiceContract;
+use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -26,6 +27,7 @@ class UserController extends Controller
 
     public function store(StoreUserRequest $request, User $user)
     {
+        event(new Registered($user));
         User::create($request->validated());
         return redirect()->route("admin.users.index");
     }
