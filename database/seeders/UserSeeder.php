@@ -19,42 +19,42 @@ class UserSeeder extends Seeder
             ],
             [
                 "name" => "super_admin jr",
-                "email" => "1romchikdcclub@gmail.com",
+                "email" => "super_admin_jr@mail.ru",
                 "password" => "super_admin_jr",
                 "avatar" => "uploads/super_admin_jr.jpg",
-                "is_admin" => true
+                "is_admin" => false
             ],
             [
                 "name" => "admin",
-                "email" => "2romchikdcclub@gmail.com",
+                "email" => "admin@mail.ru",
                 "password" => "admin",
                 "avatar" => "uploads/admin.jpg",
-                "is_admin" => true
+                "is_admin" => false
             ],
             [
                 "name" => "User1",
-                "email" => "3romchikdcclub@gmail.com",
+                "email" => "User1@mail.ru",
                 "password" => "password",
                 "avatar" => "uploads/user1-128x128.jpg",
                 "is_admin" => false
             ],
             [
                 "name" => "User2",
-                "email" => "4romchikdcclub@gmail.com",
+                "email" => "User2@mail.ru",
                 "password" => "password",
                 "avatar" => "uploads/user2-160x160.jpg",
                 "is_admin" => false
             ],
             [
                 "name" => "User3",
-                "email" => "5romchikdcclub@gmail.com",
+                "email" => "User3@mail.ru",
                 "password" => "password",
                 "avatar" => "uploads/user3-128x128.jpg",
                 "is_admin" => false
             ],
             [
                 "name" => "User4",
-                "email" => "6romchikdcclub@gmail.com",
+                "email" => "User4@mail.ru",
                 "password" => "password",
                 "avatar" => "uploads/user4-128x128.jpg",
                 "is_admin" => false
