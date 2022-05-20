@@ -27,8 +27,8 @@ class UserController extends Controller
 
     public function store(StoreUserRequest $request, User $user)
     {
-        event(new Registered($user));
         User::create($request->validated());
+        event(new Registered($user));
         return redirect()->route("admin.users.index");
     }
 
