@@ -10,8 +10,9 @@ use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
-Route::group(["prefix" => "admin", 'middleware' => ['can:admin_panel']], function () {
+Auth::routes(["verify" => true]);
 
+Route::group(["prefix" => "admin", "middleware" => "admin"], function () {
     Route::get("/", [DashboardController::class, "index"])->name("admin.dashboard");
 
     Route::resource("categories", CategoryController::class)->parameters([
@@ -61,17 +62,25 @@ Route::group(["prefix" => "admin", 'middleware' => ['can:admin_panel']], functio
         ]);
 });
 
-Auth::routes(['verify' => true]);
+
 //Route::get("/admin", [\App\Http\Controllers\Admin\DashboardController::class, "index"])->name("admin.dashboard");
+
 Route::get('/', [HomeController::class, "index"])->name("blog");
+
 Route::get('/post/{slug}', [HomeController::class, "show"])->name("post.show");
 Route::get('/tag/{slug}', [HomeController::class, "tag"])->name("tag.show");
 Route::get('/category/{slug}', [HomeController::class, "category"])->name("category.show");
-Route::get("/register", [AuthController::class, "registerForm"])->name("registerForm");
-Route::post("/register", [AuthController::class, "register"])->name("register");
-Route::get('/login', [AuthController::class, 'loginForm'])->name('loginForm');
-Route::post('/login', [AuthController::class, 'login'])->name('login');
-Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+
+Route::group(["middleware" => "auth"], function () {
+    Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+});
+
+Route::group(["middleware" => "guest"], function () {
+    Route::get("/register", [AuthController::class, "registerForm"])->name("registerForm");
+    Route::post("/register", [AuthController::class, "register"])->name("register");
+    Route::get('/login', [AuthController::class, 'loginForm'])->name('loginForm');
+    Route::post('/login', [AuthController::class, 'login'])->name('login');
+});
 
 //Route::get('/', function () {
 //    echo "Test work!";
