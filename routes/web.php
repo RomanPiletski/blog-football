@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Admin\TagController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\CommentController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Auth;
@@ -61,6 +62,10 @@ Route::group(["prefix" => "admin", "middleware" => "admin"], function () {
             'update' => 'admin.posts.update',
             'destroy' => 'admin.posts.destroy'
         ]);
+    Route::get("/comments", [\App\Http\Controllers\Admin\CommentController::class, "index"])->name("comments");
+    Route::get("/comments/toggle/{id}", [\App\Http\Controllers\Admin\CommentController::class, "toggle"]);
+    Route::delete("/comments/{id}/destroy", [\App\Http\Controllers\Admin\CommentController::class, "destroy"])
+        ->name('admin.comments.delete');
 });
 
 
@@ -77,6 +82,7 @@ Route::group(["middleware" => "auth"], function () {
     Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
     Route::get("/profile", [ProfileController::class, "index"])->name("profile");
     Route::post("/profile", [ProfileController::class, "store"]);
+    Route::post("/comment", [CommentController::class, "store"]);
 });
 
 Route::group(["middleware" => "guest"], function () {

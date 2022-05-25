@@ -2,12 +2,18 @@
 
 namespace App\Models;
 
+use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Comment extends Model
 {
     use HasFactory;
+    use Sluggable;
+
+    protected $fillable = [
+        "text"
+    ];
 
     public function post()
     {
@@ -16,7 +22,7 @@ class Comment extends Model
 
     public function author()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class, "user_id");
     }
 
     public function publish()
@@ -47,5 +53,19 @@ class Comment extends Model
     public function scopeUnpublished($query)
     {
         return $query->where("is_publish", false);
+    }
+
+    public function sluggable(): array
+    {
+        return [
+            'slug' => [
+                'source' => 'text'
+            ]
+        ];
+    }
+
+    public function remove()
+    {
+        $this->delete();
     }
 }

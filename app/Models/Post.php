@@ -32,6 +32,11 @@ class Post extends Model
         return $this->belongsTo(Category::class);
     }
 
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
+    }
+
     public function author()
     {
         return $this->belongsTo(User::class, "user_id");
@@ -187,6 +192,10 @@ class Post extends Model
     public static function getRecentPosts()
     {
         return self::orderBy("created_at", "desc")->take(4)->get();
+    }
+
+    public function getComments(){
+        return $this->comments->where("is_publish", 1)->all();
     }
 
 }
