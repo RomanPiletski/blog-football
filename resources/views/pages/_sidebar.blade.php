@@ -29,7 +29,7 @@
                 </a>
 
                 <div class="p-content">
-                    <a href="#" class="text-uppercase">{{$post->title}}</a>
+                    <a href="{{route("post.show", $post->slug)}}" class="text-uppercase">{{$post->title}}</a>
                     <span class="p-date">{{$post->created_at->format("F j\, Y")}}</span><br>
                     <span class="p-date">{{$post->views}} просмотров</span>
 
