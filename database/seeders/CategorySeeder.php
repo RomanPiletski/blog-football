@@ -12,24 +12,24 @@ class CategorySeeder extends Seeder
     {
         DB::table("categories")->insert([
             [
-                "title" => "Категория 1",
-                "slug" => "category-1",
+                "title" => "Чемпионат Мира 2022",
+                "slug" => "chempionat-mira-2022",
             ],
             [
-                "title" => "Категория 2",
-                "slug" => "category-2",
+                "title" => "Лига чемпионов",
+                "slug" => "liga-chempionov",
             ],
             [
-                "title" => "Категория 3",
-                "slug" => "category-3",
+                "title" => "Английская Премьер-Лига",
+                "slug" => "anglijskaya-premьer-liga",
             ],
             [
-                "title" => "Категория 4",
-                "slug" => "category-4",
+                "title" => "Чемпионат Испании",
+                "slug" => "chempionat-ispanii",
             ],
             [
-                "title" => "Категория 5",
-                "slug" => "category-5",
+                "title" => "Чемпионат Беларуси",
+                "slug" => "chempionat-belarusi",
             ],
         ]);
     }

@@ -8,17 +8,17 @@
 {{--                Давление {{round($weather->temperature()->getPressure() * 0.75006375541921, 0)}} мм.рт.ст. </p>--}}
 {{--        </div>--}}
         <aside class="widget news-letter">
-            <h3 class="widget-title text-uppercase text-center">Get Newsletter</h3>
+            <h3 class="widget-title text-uppercase text-center">Подписаться на рассылку</h3>
 
             <form action="#">
-                <input type="email" placeholder="Your email address">
-                <input type="submit" value="Subscribe Now"
+                <input type="email" placeholder="Введите Ваш E-mail">
+                <input type="submit" value="Подписаться"
                        class="text-uppercase text-center btn btn-subscribe">
             </form>
 
         </aside>
         <aside class="widget">
-            <h3 class="widget-title text-uppercase text-center">Popular Posts</h3>
+            <h3 class="widget-title text-uppercase text-center">Популярные статьи</h3>
             @foreach($popularPosts as $post)
             <div class="popular-post">
 
@@ -38,7 +38,7 @@
             @endforeach
         </aside>
         <aside class="widget">
-            <h3 class="widget-title text-uppercase text-center">Featured Posts</h3>
+            <h3 class="widget-title text-uppercase text-center">Рекомендованные статьи</h3>
 
             <div id="widget-feature" class="owl-carousel">
                 @foreach($featuredPosts as $post)
@@ -57,7 +57,7 @@
             </div>
         </aside>
         <aside class="widget pos-padding">
-            <h3 class="widget-title text-uppercase text-center">Recent Posts</h3>
+            <h3 class="widget-title text-uppercase text-center">Недавние статьи</h3>
             @foreach($recentPosts as $post)
             <div class="thumb-latest-posts">
 
@@ -77,7 +77,7 @@
             @endforeach
         </aside>
         <aside class="widget border pos-padding">
-            <h3 class="widget-title text-uppercase text-center">Categories</h3>
+            <h3 class="widget-title text-uppercase text-center">Категории</h3>
             <ul>
                 @foreach($categories as $category)
                 <li>
