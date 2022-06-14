@@ -52,13 +52,12 @@
                                             <a class="fa fa-remove"></a>
                                         </button>
                                     </form>
-
                                 </td>
                             </tr>
                         @endforeach
                         </tfoot>
                     </table>
-                    {{$categories->links()}}
+{{--                    {{$categories->links()}}--}}
                 </div>
                 <!-- /.box-body -->
             </div>
