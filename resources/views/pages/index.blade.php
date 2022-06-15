@@ -30,11 +30,11 @@
                                 </p>
 
                                 <div class="btn-continue-reading text-center text-uppercase">
-                                    <a href="{{route("post.show", $post->slug)}}" class="more-link">Continue Reading</a>
+                                    <a href="{{route("post.show", $post->slug)}}" class="more-link">Продолжить чтение</a>
                                 </div>
                             </div>
                             <div class="social-share">
-                                <span class="social-share-title pull-left text-capitalize">By <a href="#">{{$post->author->name}}</a> On {{$post->created_at->format("F j\, Y")}}<br>
+                                <span class="social-share-title pull-left text-capitalize">Создан <a href="#">{{$post->author->name}}</a> {{$post->created_at->format("F j\, Y")}}<br>
                                     <span class="p-date">{{$post->views}} просмотров</span></span>
                                 <ul class="text-center pull-right">
                                     <li><a class="s-facebook" href="#"><i class="fa fa-facebook"></i></a></li>

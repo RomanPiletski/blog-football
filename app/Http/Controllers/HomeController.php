@@ -23,6 +23,7 @@ class HomeController extends Controller
     public function show($slug)
     {
         $post = Post::where("slug", $slug)->firstOrFail();
+        event("postHasViewed", $post);
         return view("pages.show", ["post" => $post]);
     }
 

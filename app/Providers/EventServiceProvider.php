@@ -30,13 +30,11 @@ class EventServiceProvider extends ServiceProvider
     public function boot()
     {
         User::observe(UserObserver::class);
+        Event::listen("postHasViewed", function ($post) {
+            $post->increment("views");
+        });
     }
 
-    /**
-     * Determine if events and listeners should be automatically discovered.
-     *
-     * @return bool
-     */
     public function shouldDiscoverEvents()
     {
         return false;

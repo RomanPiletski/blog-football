@@ -149,7 +149,7 @@
                                 <img src="/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                                 <p>
-                                    Alexander Pierce - Web Developer
+                                    Роман Пилецкий - Web Developer
                                     <small>Member since Nov. 2012</small>
                                 </p>
                             </li>
@@ -200,7 +200,7 @@
                     <img src="/img/user2-160x160.jpg" class="img-circle" alt="User Image">
                 </div>
                 <div class="pull-left info">
-                    <p>Alexander Pierce</p>
+                    <p>Роман Пилецкий</p>
                     <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                 </div>
             </div>
@@ -228,7 +228,7 @@
         <div class="pull-right hidden-xs">
             <b>Version</b> 2.3.7
         </div>
-        <strong>Copyright &copy; 2014-2016 <a href="http://almsaeedstudio.com/">Almsaeed Studio</a>.</strong> All rights
+        <strong>Copyright &copy; 2022 <a href="http://almsaeedstudio.com/">Almsaeed Studio</a>.</strong> All rights
         reserved.
     </footer>
 

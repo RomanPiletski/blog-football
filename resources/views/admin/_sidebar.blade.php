@@ -1,5 +1,5 @@
 <ul class="sidebar-menu">
-    <li class="header">MAIN NAVIGATION</li>
+    <li class="header">Главная навигация</li>
     <li class="treeview">
         <a href="{{route("admin.dashboard")}}">
             <i class="fa fa-dashboard"></i> <span>Админ-панель</span>

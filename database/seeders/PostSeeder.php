@@ -21,7 +21,7 @@ class PostSeeder extends Seeder
                 'user_id' => 1,
                 'is_publish' => 1,
                 'is_recommended' => 1,
-                'views' => mt_rand(10,999),
+                'views' => 0,
                 "created_at" => "2022-05-01 08:02:51",
                 "image" => "uploads/ins-1.jpg"
             ],
@@ -34,7 +34,7 @@ class PostSeeder extends Seeder
                 'user_id' => 2,
                 'is_publish' => 1,
                 'is_recommended' => 1,
-                'views' => mt_rand(10,999),
+                'views' => 0,
                 "created_at" => "2022-05-02 08:02:51",
                 "image" => "uploads/ins-2.jpg"
             ],
@@ -47,7 +47,7 @@ class PostSeeder extends Seeder
                 'user_id' => 3,
                 'is_publish' => 1,
                 'is_recommended' => 1,
-                'views' => mt_rand(10,999),
+                'views' => 0,
                 "created_at" => "2022-05-03 08:02:51",
                 "image" => "uploads/ins-3.jpg"
             ],
@@ -60,7 +60,7 @@ class PostSeeder extends Seeder
                 'user_id' => 4,
                 'is_publish' => 1,
                 'is_recommended' => 1,
-                'views' => mt_rand(10,999),
+                'views' => 0,
                 "created_at" => "2022-05-04 08:02:51",
                 "image" => "uploads/ins-4.jpg"
             ],
@@ -73,7 +73,7 @@ class PostSeeder extends Seeder
                 'user_id' => 5,
                 'is_publish' => 1,
                 'is_recommended' => 1,
-                'views' => mt_rand(10,999),
+                'views' => 0,
                 "created_at" => "2022-05-05 08:02:51",
                 "image" => "uploads/ins-5.jpg"
             ],
