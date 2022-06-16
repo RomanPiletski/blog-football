@@ -20,7 +20,7 @@ class AuthController extends Controller
     public function register(RegisterUserRequest $request)
     {
         User::create($request->validated());
-        return redirect()->route('loginForm');
+        return redirect()->route('loginForm')->with("status", "Вы успешно зарегестрировались! :)");
     }
 
     public function loginForm()
@@ -32,16 +32,16 @@ class AuthController extends Controller
     {
         {
             if (Auth::attempt($request->validated())) {
-                return redirect()->route("blog");
+                return redirect()->route("blog")->with("status", "Вы успешно авторизировались :)");
             }
 
-            return redirect()->back()->with("status", "Неправильный логин или пароль");
+            return redirect()->back()->with("status", "Неправильный логин или пароль!");
         }
     }
 
     public function logout()
     {
         Auth::logout();
-        return redirect()->route("blog");
+        return redirect()->route("blog")->with("status", "Вы вышли из профиля! :)");
     }
 }

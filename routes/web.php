@@ -6,10 +6,11 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Admin\TagController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Admin\SubscribeController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\SubscribeController;
+use App\Http\Controllers\SubscribeController as SubscribeControllerAlias;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -63,18 +64,31 @@ Route::group(["prefix" => "admin", "middleware" => "admin"], function () {
             'update' => 'admin.posts.update',
             'destroy' => 'admin.posts.destroy'
         ]);
+    Route::resource("subscribers", SubscribeController::class)
+        ->parameters([
+            'subscribers' => "subscribers"
+        ])->names([
+            'edit' => 'admin.subs.edit',
+            'create' => 'admin.subs.create',
+            'show' => 'admin.subs.show',
+            'index' => 'admin.subs.index',
+            'store' => 'admin.subs.store',
+            'update' => 'admin.subs.update',
+            'destroy' => 'admin.subs.destroy'
+        ]);
     Route::get("/comments", [\App\Http\Controllers\Admin\CommentController::class, "index"])->name("comments");
     Route::get("/comments/toggle/{id}", [\App\Http\Controllers\Admin\CommentController::class, "toggle"]);
     Route::delete("/comments/{id}/destroy", [\App\Http\Controllers\Admin\CommentController::class, "destroy"])
         ->name('admin.comments.delete');
+
 });
 
 
 //Route::get("/admin", [\App\Http\Controllers\Admin\DashboardController::class, "index"])->name("admin.dashboard");
 
 Route::get("/", [HomeController::class, "index"])->name("blog");
-Route::post("/subscribe", [SubscribeController::class, "subscribe"])->name("subscribe");
-Route::get("verify/{token}", [SubscribeController::class, "verify"])->name("verify");
+Route::post("/subscribe", [SubscribeControllerAlias::class, "subscribe"])->name("subscribe");
+Route::get("verify/{token}", [SubscribeControllerAlias::class, "verify"])->name("verify");
 
 
 Route::get('/post/{slug}', [HomeController::class, "show"])->name("post.show");

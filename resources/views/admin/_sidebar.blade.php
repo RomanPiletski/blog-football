@@ -17,6 +17,6 @@
         </a>
     </li>
     <li><a href="{{route("admin.users.index")}}"><i class="fa fa-users"></i> <span>Пользователи</span></a></li>
-    <li><a href="#"><i class="fa fa-user-plus"></i> <span>Подписчики</span></a></li>
+    <li><a href="{{route("admin.subs.index")}}"><i class="fa fa-user-plus"></i> <span>Подписчики</span></a></li>
 
 </ul>

@@ -65,13 +65,13 @@
                     {{$users->links()}}
                 </div>
 
-                <div style="font-weight:bold; text-align:center; color: #333; background-color: #fff; border: 2px solid #eee; max-width: 100%; margin-bottom: 10px; padding: 10px">
-                    <p>Погода: г. {{mb_strtoupper($weather->coordinates()->getCityName())}} {{round($weather->temperature()->getCurrentTemperature(),1)}}&deg C.
-                        Ощущается как {{round($weather->temperature()->getFeelsLikeTemperature(),1)}}&deg C.</p>
-                    <p style="font-size: 125%;">{{$weather->cloudiness()->getDescription()}} <img src="{{asset("storage/img/weather/". $weather->cloudiness()->getIcon() . "@2x.png")}}" alt="image-weather"></p>
-                    <p style="font-size: 125%;">Влажность {{$weather->temperature()->getHumidity()}} %.
-                        Давление {{round($weather->temperature()->getPressure() * 0.75006375541921, 0)}} мм.рт.ст. </p>
-                </div>
+{{--                <div style="font-weight:bold; text-align:center; color: #333; background-color: #fff; border: 2px solid #eee; max-width: 100%; margin-bottom: 10px; padding: 10px">--}}
+{{--                    <p>Погода: г. {{mb_strtoupper($weather->coordinates()->getCityName())}} {{round($weather->temperature()->getCurrentTemperature(),1)}}&deg C.--}}
+{{--                        Ощущается как {{round($weather->temperature()->getFeelsLikeTemperature(),1)}}&deg C.</p>--}}
+{{--                    <p style="font-size: 125%;">{{$weather->cloudiness()->getDescription()}} <img src="{{asset("storage/img/weather/". $weather->cloudiness()->getIcon() . "@2x.png")}}" alt="image-weather"></p>--}}
+{{--                    <p style="font-size: 125%;">Влажность {{$weather->temperature()->getHumidity()}} %.--}}
+{{--                        Давление {{round($weather->temperature()->getPressure() * 0.75006375541921, 0)}} мм.рт.ст. </p>--}}
+{{--                </div>--}}
 
                 <!-- /.box-body -->
             </div>
