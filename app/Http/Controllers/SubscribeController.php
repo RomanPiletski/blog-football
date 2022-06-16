@@ -17,6 +17,8 @@ class SubscribeController extends Controller
     }
     public function verify($token) {
         $subs = Subscription::where("token", $token)->firstOrFail();
-        dd("OK");
+        $subs->token = null;
+        $subs->save();
+        return redirect()->route("blog")->with("status", "Ваша почта подтверждена! Спасибо :)");
     }
 }
