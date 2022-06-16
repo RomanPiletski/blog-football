@@ -16,6 +16,7 @@ class SubscribeController extends Controller
         return redirect()->back()->with("status", "Проверьте Вашу почту! :)");
     }
     public function verify($token) {
-        dd($token);
+        $subs = Subscription::where("token", $token)->firstOrFail();
+        dd("OK");
     }
 }
