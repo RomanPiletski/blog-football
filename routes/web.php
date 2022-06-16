@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SubscribeController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -71,7 +72,9 @@ Route::group(["prefix" => "admin", "middleware" => "admin"], function () {
 
 //Route::get("/admin", [\App\Http\Controllers\Admin\DashboardController::class, "index"])->name("admin.dashboard");
 
-Route::get('/', [HomeController::class, "index"])->name("blog");
+Route::get("/", [HomeController::class, "index"])->name("blog");
+Route::post("/subscribe", [SubscribeController::class, "subscribe"])->name("subscribe");
+Route::get("verify/{token}", [SubscribeController::class, "verify"])->name("verify");
 
 
 Route::get('/post/{slug}', [HomeController::class, "show"])->name("post.show");

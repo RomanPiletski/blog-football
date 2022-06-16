@@ -9,9 +9,10 @@
 {{--        </div>--}}
         <aside class="widget news-letter">
             <h3 class="widget-title text-uppercase text-center">Подписаться на рассылку</h3>
-
-            <form action="#">
-                <input type="email" placeholder="Введите Ваш E-mail">
+            @include("admin.errors")
+            <form action="{{route("subscribe")}}" method="POST">
+                @csrf
+                <input type="email" name="email" placeholder="Введите Ваш E-mail">
                 <input type="submit" value="Подписаться"
                        class="text-uppercase text-center btn btn-subscribe">
             </form>

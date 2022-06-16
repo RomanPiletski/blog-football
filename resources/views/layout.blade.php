@@ -60,7 +60,11 @@
                 </div>
             </div>
         </nav>
-
+        @if(session("status"))
+            <div class="alert alert-success" style="text-align: center">
+                {{session("status")}}
+            </div>
+        @endif
         @yield("content")
 
         <div id="footer">
