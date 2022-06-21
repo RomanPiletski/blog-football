@@ -15,7 +15,7 @@
             <div class="wrapper-weather">
                 <p class="wrapper-weather-name">г. {{mb_strtoupper($weather->coordinates()->getCityName())}} {{round($weather->temperature()->getCurrentTemperature(),1)}}&deg C.<br></p>
                  <p style="color: #00acdf" >Ощущается как {{round($weather->temperature()->getFeelsLikeTemperature(),1)}}&deg C.</p>
-                 <p class="wrapper-weather-text" >{{mb_strtoupper($weather->cloudiness()->getDescription())}} <img src="{{asset("storage/img/weather/". $weather->cloudiness()->getIcon() . "@2x.png")}}" alt="image-weather"><br>
+                 <p class="wrapper-weather-text" >{{mb_strtoupper($weather->cloudiness()->getDescription())}}<br> <img src="{{asset("storage/img/weather/". $weather->cloudiness()->getIcon() . "@2x.png")}}" alt="image-weather"><br>
                  Влажность: {{$weather->temperature()->getHumidity()}} %.<br>
                  Давление: {{round($weather->temperature()->getPressure() * 0.75006375541921, 0)}} мм.рт.ст. </p>
             </div>
