@@ -1,12 +1,5 @@
 <div class="col-md-4" data-sticky_column>
     <div class="primary-sidebar">
-{{--        <div style="font-weight:bold; text-align:center; color: #333; background-color: #fff; border: 2px solid #eee; max-width: 100%; margin-bottom: 10px; padding: 10px">--}}
-{{--            <p>Погода: г. {{mb_strtoupper($weather->coordinates()->getCityName())}} {{round($weather->temperature()->getCurrentTemperature(),1)}}&deg C.--}}
-{{--                Ощущается как {{round($weather->temperature()->getFeelsLikeTemperature(),1)}}&deg C.</p>--}}
-{{--            <p style="font-size: 125%;">{{$weather->cloudiness()->getDescription()}} <img src="{{asset("storage/img/weather/". $weather->cloudiness()->getIcon() . "@2x.png")}}" alt="image-weather"></p>--}}
-{{--            <p style="font-size: 125%;">Влажность {{$weather->temperature()->getHumidity()}} %.--}}
-{{--                Давление {{round($weather->temperature()->getPressure() * 0.75006375541921, 0)}} мм.рт.ст. </p>--}}
-{{--        </div>--}}
         <aside class="widget news-letter">
             <h3 class="widget-title text-uppercase text-center">Подписаться на рассылку</h3>
             @include("admin.errors")
@@ -17,6 +10,15 @@
                        class="text-uppercase text-center btn btn-subscribe">
             </form>
 
+        </aside>
+        <aside class="widget">
+            <div class="wrapper-weather">
+                <p class="wrapper-weather-name">г. {{mb_strtoupper($weather->coordinates()->getCityName())}} {{round($weather->temperature()->getCurrentTemperature(),1)}}&deg C.<br></p>
+                 <p style="color: #00acdf" >Ощущается как {{round($weather->temperature()->getFeelsLikeTemperature(),1)}}&deg C.</p>
+                 <p class="wrapper-weather-text" >{{mb_strtoupper($weather->cloudiness()->getDescription())}} <img src="{{asset("storage/img/weather/". $weather->cloudiness()->getIcon() . "@2x.png")}}" alt="image-weather"><br>
+                 Влажность: {{$weather->temperature()->getHumidity()}} %.<br>
+                 Давление: {{round($weather->temperature()->getPressure() * 0.75006375541921, 0)}} мм.рт.ст. </p>
+            </div>
         </aside>
         <aside class="widget">
             <h3 class="widget-title text-uppercase text-center">Популярные статьи</h3>

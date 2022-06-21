@@ -1642,3 +1642,21 @@ img.profile-image
     margin: 0px auto 20px;
     display: block;
 }
+.wrapper-weather {
+    font-weight:bold;
+    text-align:center;
+    color: #333;
+    border: none;
+    max-width: 100%;
+    margin: 0px;
+    padding: 0px;
+    background-color: #fff;
+}
+.wrapper-weather-name {
+    font-size: 20px;
+    margin: 0px;
+    padding: 0px;
+}
+.wrapper-weather-text {
+    font-size: 125%;
+}
