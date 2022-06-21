@@ -27,7 +27,7 @@
                 <!-- /.box-header -->
                 <div class="box-body">
                     <div class="form-group">
-                        <a href="create.html" class="btn btn-success">Добавить</a>
+                        <a href="{{route("admin.subs.create")}}" class="btn btn-success">Добавить</a>
                     </div>
                     <table id="example1" class="table table-bordered table-striped">
                         <thead>
@@ -38,19 +38,24 @@
                         </tr>
                         </thead>
                         <tbody>
+                        @foreach($subs as $subscriber)
                         <tr>
-                            <td>1</td>
-                            <td>james@example.com
+                            <td>{{$subscriber->id}}</td>
+                            <td>{{$subscriber->email}}</td>
+                            <td>
+                                <form method="POST" action="{{route("admin.subs.destroy", $subscriber->id)}}">
+                                    @csrf
+                                    @method("DELETE")
+                                    <button onclick="return confirm('Are you sure?')" type="submit" class="delete">
+                                        <a class="fa fa-remove"></a>
+                                    </button>
+                                </form>
                             </td>
-                            <td><a href="edit.html" class="fa fa-pencil"></a> <a href="#" class="fa fa-remove"></a></td>
                         </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>rahim@marlindev.ru</td>
-                            <td><a href="edit.html" class="fa fa-pencil"></a> <a href="#" class="fa fa-remove"></a></td>
-                        </tr>
+                        @endforeach
                         </tfoot>
                     </table>
+                    {{$subs->links()}}
                 </div>
                 <!-- /.box-body -->
             </div>

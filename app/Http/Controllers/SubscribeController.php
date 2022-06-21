@@ -12,6 +12,7 @@ class SubscribeController extends Controller
 {
     public function subscribe(SubscribeSubscriptionRequest $request) {
         $subs = Subscription::add($request->get("email"));
+        $subs->generateToken();
         Mail::to($subs)->send(new SubscribeEmail($subs));
         return redirect()->back()->with("status", "Проверьте Вашу почту! :)");
     }
