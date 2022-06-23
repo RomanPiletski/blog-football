@@ -75,7 +75,7 @@
 
         <div id="footer">
             <div class="footer-instagram-section">
-                <h3 class="footer-instagram-title text-center text-uppercase">Instagram</h3>
+                <h3 class="footer-instagram-title text-center text-uppercase">Изображения из статей</h3>
 
                 <div id="footer-instagram" class="owl-carousel">
 

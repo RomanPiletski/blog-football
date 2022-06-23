@@ -191,7 +191,7 @@ class Post extends Model
 
     public static function getRecentPosts()
     {
-        return self::orderBy("created_at", "desc")->take(4)->get();
+        return self::orderBy("created_at", "desc")->take(3)->get();
     }
 
     public function getComments(){

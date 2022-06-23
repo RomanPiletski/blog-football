@@ -73,7 +73,19 @@
             @endforeach
         </aside>
         <aside class="widget border pos-padding">
-            <h3 class="widget-title text-uppercase text-center">Категории</h3>
+            <h3 class="widget-title text-uppercase text-center">Рейтинг пользователей</h3>
+            <ul>
+                @foreach($ratedUsers as $ratedUser)
+                    <li>
+                        <a>{{$loop->iteration}}. </a>
+                        <a>{{$ratedUser->name}}</a>
+                        <span class="post-count pull-right">Матчи: {{$ratedUser->scores}}</span>
+                    </li>
+                @endforeach
+            </ul>
+        </aside>
+        <aside class="widget border pos-padding">
+            <h3 class="widget-title text-uppercase text-center">Категории статей</h3>
             <ul>
                 @foreach($categories as $category)
                 <li>

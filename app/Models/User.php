@@ -88,4 +88,9 @@ class User extends Authenticatable
         return $value ?? self::NO_IMAGE;
     }
 
+    public static function getRated()
+    {
+        return self::orderBy("scores", "desc")->take(3)->get();
+    }
+
 }
