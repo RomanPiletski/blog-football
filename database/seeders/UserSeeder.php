@@ -24,6 +24,13 @@ class UserSeeder extends Seeder
                 "avatar" => "uploads/admin.jpg",
                 "is_admin" => true
             ],
+            [
+                "name" => "User Blog",
+                "email" => "blender-04@yandex.by",
+                "password" => bcrypt("123"),
+                "avatar" => "uploads/user3-128x128.jpg",
+                "is_admin" => false
+            ],
         ]);
     }
 }

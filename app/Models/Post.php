@@ -194,8 +194,14 @@ class Post extends Model
         return self::orderBy("created_at", "desc")->take(3)->get();
     }
 
-    public function getComments(){
+    public function getComments()
+    {
         return $this->comments->where("is_publish", 1)->all();
+    }
+
+    public function getTagId()
+    {
+        return (!empty($this->tags->first()->id) && $this->tags->firstOrFail()->id == 1) ? true : false;
     }
 
 }

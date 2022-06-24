@@ -111,39 +111,32 @@
                         @if(!$post->comments->isEmpty())
                             @foreach($post->getComments() as $comment)
                                 <div class="bottom-comment"><!--bottom comment-->
-                        <div class="comment-img">
-                            <img class="img-circle" width="75px" height="75px" src="{{asset("storage/". $comment->author->avatar)}}" alt="">
-                        </div>
-
-                        <div class="comment-text">
-                            <h5>{{$comment->author->name}}</h5>
-
-                            <p class="comment-date">
-                                {{$comment->created_at->diffForHumans()}}
-                            </p>
-
-
-                            <p class="para">{{$comment->text}}</p>
+                                    <div class="comment-img">
+                                    <img class="img-circle" width="75px" height="75px" src="{{asset("storage/". $comment->author->avatar)}}" alt="">
+                                    </div>
+                                <div class="comment-text">
+                                <h5>{{$comment->author->name}}</h5>
+                                <p class="comment-date">
+                                {{$comment->created_at->diffForHumans()}}</p>
+                                <p class="para">{{$comment->text}}</p>
 
                             @for ($i = 0; $i < $comment->stars; $i++)
                                 <i class="fa fa-star"></i>
                             @endfor
 
-                        </div>
-                    </div>
+                                    </div>
+                                </div>
                             @endforeach
                         @endif
                     <!-- end bottom comment-->
 
                     @if(Auth::check())
-                    <div class="leave-comment"><!--leave comment-->
-                        <h4>Оставить комментарий</h4>
-
-
-                        <form class="form-horizontal contact-form" role="form" method="post" action="/comment">
-                            @csrf
-                            <input type="hidden" name="post_id" value="{{$post->id}}">
-                            <div class="form-group">
+                        <div class="leave-comment"><!--leave comment-->
+                            <h4>Оставить комментарий</h4>
+                                <form class="form-horizontal contact-form" role="form" method="post" action="/comment">
+                                @csrf
+                                <input type="hidden" name="post_id" value="{{$post->id}}">
+                                <div class="form-group">
                                 <div class="col-md-12">
 										<textarea class="form-control" rows="6" name="message"
                                                   placeholder="Напишите текст"></textarea>
@@ -152,6 +145,18 @@
                             <button class="btn send-btn">Комментировать</button>
                         </form>
                     </div><!--end leave comment-->
+                    @endif
+                    @if(Auth::check() && $post->getTagId())
+                        <div class="leave-comment"><!--leave comment-->
+                            <h4>Прогноз счета</h4>
+                            <form class="form-horizontal contact-form" role="form" method="post" action="/comment">
+                                @csrf
+                                <input type="hidden" name="post_id" value="{{$post->id}}">
+                                <div class="form-group">
+                                </div>
+                                <button class="btn send-btn">Оставить прогноз</button>
+                            </form>
+                        </div><!--end leave comment-->
                     @endif
                 </div>
                 @include("pages._sidebar")
