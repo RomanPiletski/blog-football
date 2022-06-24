@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->text("text");
             $table->string("slug", 255);
+            $table->integer("stars")->default(5);
             $table->foreignId("user_id")->constrained("users")->cascadeOnDelete();
             $table->foreignId("post_id")->constrained("posts")->cascadeOnDelete();
             $table->boolean("is_publish")->default(0);

@@ -94,7 +94,7 @@
                     </div><!--blog next previous end-->
                     <div class="related-post-carousel"><!--related post carousel-->
                         <div class="related-heading">
-                            <h4>You might also like</h4>
+                            <h4>Вам могут понравиться</h4>
                         </div>
                         <div class="items">
                             @foreach($post->related() as $item)
@@ -124,6 +124,11 @@
 
 
                             <p class="para">{{$comment->text}}</p>
+
+                            @for ($i = 0; $i < $comment->stars; $i++)
+                                <i class="fa fa-star"></i>
+                            @endfor
+
                         </div>
                     </div>
                             @endforeach
@@ -132,7 +137,7 @@
 
                     @if(Auth::check())
                     <div class="leave-comment"><!--leave comment-->
-                        <h4>Leave a reply</h4>
+                        <h4>Оставить комментарий</h4>
 
 
                         <form class="form-horizontal contact-form" role="form" method="post" action="/comment">
@@ -141,10 +146,10 @@
                             <div class="form-group">
                                 <div class="col-md-12">
 										<textarea class="form-control" rows="6" name="message"
-                                                  placeholder="Write Massage"></textarea>
+                                                  placeholder="Напишите текст"></textarea>
                                 </div>
                             </div>
-                            <button class="btn send-btn">Post Comment</button>
+                            <button class="btn send-btn">Комментировать</button>
                         </form>
                     </div><!--end leave comment-->
                     @endif

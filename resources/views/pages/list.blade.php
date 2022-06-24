@@ -16,7 +16,7 @@
                                     <a href="{{route("post.show", $post->slug)}}"><img src="{{asset("storage/". $post->image)}}" alt=""></a>
 
                                     <a href="{{route("post.show", $post->slug)}}" class="post-thumb-overlay text-center">
-                                        <div class="text-uppercase text-center">View Post</div>
+                                        <div class="text-uppercase text-center">ПРОСМОТРЕТЬ</div>
                                     </a>
                                 </div>
                                 <div class="post-content">

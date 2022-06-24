@@ -21,7 +21,7 @@ class UserSeeder extends Seeder
                 "name" => "Roman Piletsky",
                 "email" => "blender-04@yandex.com",
                 "password" => bcrypt("123"),
-                "avatar" => "uploads/super_admin_jr.jpg",
+                "avatar" => "uploads/admin.jpg",
                 "is_admin" => true
             ],
         ]);

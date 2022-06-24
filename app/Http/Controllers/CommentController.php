@@ -17,6 +17,6 @@ class CommentController extends Controller
         $comment->user_id = Auth::user()->id;
         $comment->post_id = $request->get("post_id");
         $comment->save();
-        return redirect()->back()->with("status", "Comment will be added soon...");
+        return redirect()->back()->with("status", "Комментарий скоро будет добавлен... ");
     }
 }

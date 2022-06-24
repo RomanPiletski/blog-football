@@ -12,7 +12,7 @@
                         @if(session("status"))
                             <div class="alert alert-success" style="font-size: 16px; text-align: center">{{session("status")}}</div>
                         @endif
-                        <h3 class="text-uppercase">My profile</h3>
+                        <h3 class="text-uppercase">Мой профиль</h3>
                         @include("admin.errors")
                         <br>
                         <img src="{{asset("storage/". $user->avatar)}}" alt="" class="profile-image">
@@ -42,7 +42,7 @@
                                     <input type="file" class="form-control" id="image" name="avatar">
                                 </div>
                             </div>
-                            <button type="submit" class="btn send-btn">Update</button>
+                            <button type="submit" class="btn send-btn">Обновить</button>
 
                         </form>
                     </div><!--end leave comment-->
