@@ -80,28 +80,28 @@
                 <div id="footer-instagram" class="owl-carousel">
 
                     <div class="item">
-                        <a href="#"><img src="/images/ins-1.jpg" alt=""></a>
+                        <a href="/images/ins-1.jpg" target="_blank"><img src="/images/ins-1.jpg" alt=""></a>
                     </div>
                     <div class="item">
-                        <a href="#"><img src="/images/ins-2.jpg" alt=""></a>
+                        <a href="/images/ins-2.jpg" target="_blank"><img src="/images/ins-2.jpg" alt=""></a>
                     </div>
                     <div class="item">
-                        <a href="#"><img src="/images/ins-3.jpg" alt=""></a>
+                        <a href="/images/ins-3.jpg" target="_blank"><img src="/images/ins-3.jpg" alt=""></a>
                     </div>
                     <div class="item">
-                        <a href="#"><img src="/images/ins-4.jpg" alt=""></a>
+                        <a href="/images/ins-4.jpg" target="_blank"><img src="/images/ins-4.jpg" alt=""></a>
                     </div>
                     <div class="item">
-                        <a href="#"><img src="/images/ins-5.jpg" alt=""></a>
+                        <a href="/images/ins-5.jpg" target="_blank"><img src="/images/ins-5.jpg" alt=""></a>
                     </div>
                     <div class="item">
-                        <a href="#"><img src="/images/ins-6.jpg" alt=""></a>
+                        <a href="/images/ins-6.jpg" target="_blank"><img src="/images/ins-6.jpg" alt=""></a>
                     </div>
                     <div class="item">
-                        <a href="#"><img src="/images/ins-7.jpg" alt=""></a>
+                        <a href="/images/ins-7.jpg" target="_blank"><img src="/images/ins-7.jpg" alt=""></a>
                     </div>
                     <div class="item">
-                        <a href="#"><img src="/images/ins-8.jpg" alt=""></a>
+                        <a href="/images/ins-8.jpg" target="_blank"><img src="/images/ins-8.jpg" alt=""></a>
                     </div>
 
                 </div>
