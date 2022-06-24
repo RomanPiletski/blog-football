@@ -12,8 +12,8 @@ class TagSeeder extends Seeder
     {
         DB::table('tags')->insert([
             [
-                'title' => 'Тег 1',
-                'slug' => 'teg-1',
+                'title' => 'Анонс матча',
+                'slug' => 'anons-matcha',
             ],
             [
                 'title' => 'Тег 2',
