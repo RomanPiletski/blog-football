@@ -79,7 +79,7 @@
                     <li>
                         <a>{{$loop->iteration}}. </a>
                         <a>{{$ratedUser->name}}</a>
-                        <span class="post-count pull-right">Матчи: {{$ratedUser->scores}}</span>
+                        <span class="post-count pull-right">Баллы: {{$ratedUser->scores}}</span>
                     </li>
                 @endforeach
             </ul>

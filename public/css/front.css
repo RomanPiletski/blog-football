@@ -5144,6 +5144,9 @@ img.profile-image
 .wrapper-weather-text {
     font-size: 125%;
 }
+.text-cont {
+    font-size: 16px;
+}
 
 /* lg */
 @media (min-width: 1400px) {

@@ -31,7 +31,7 @@
                         <ul class="nav navbar-nav text-uppercase">
                             <li><a href="{{route("blog")}}">Главная страница</a></li>
                             <li><a href="about-me.html">Информация</a></li>
-                            <li><a href="contact.html">Контакты</a></li>
+                            <li><a href="#cont">Контакты</a></li>
                             <a class="navbar-brand"><img src="/images/soccer-field.png" alt="logo-image"></a>
 
                         </ul>
@@ -103,123 +103,22 @@
                     <div class="item">
                         <a href="/images/ins-8.jpg" target="_blank"><img src="/images/ins-8.jpg" alt=""></a>
                     </div>
-
                 </div>
             </div>
         </div>
         <footer class="footer-widget-section">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <aside class="footer-widget">
-                            <div class="about-img"><img src="/images/footer-logo.png" alt=""></div>
-                            <div class="about-content">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                                eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed voluptua. At vero eos et
-                                accusam et justo duo dlores et ea rebum magna text ar koto din.
-                            </div>
-                            <div class="address">
-                                <h4 class="text-uppercase">contact Info</h4>
+{{--                 <div class="wrapper-img-about"><img src="/images/footer-logo.png" alt=""></div>--}}
+                    <div class="text-cont">
+                          <h4 class="text-uppercase" >Контактная информация:</h4>
 
-                                <p> 142/5 BC Street, ES, VSA</p>
+                          <p > г.Минск, Беларусь</p>
 
-                                <p> Phone: +123 456 78900</p>
+                          <p> Телефон: +375 29 5832381</p>
 
-                                <p>rahim@marlindev.ru</p>
-                            </div>
-                        </aside>
+                          <p id="cont">blender-04@yandex.by</p>
                     </div>
-
-                    <div class="col-md-4">
-                        <aside class="footer-widget">
-                            <h3 class="widget-title text-uppercase">Testimonials</h3>
-
-                            <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                                <!--Indicator-->
-                                <ol class="carousel-indicators">
-                                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                                    <li data-target="#myCarousel" data-slide-to="1"></li>
-                                    <li data-target="#myCarousel" data-slide-to="2"></li>
-                                </ol>
-                                <div class="carousel-inner" role="listbox">
-                                    <div class="item active">
-                                        <div class="single-review">
-                                            <div class="review-text">
-                                                <p>Lorem ipsum dolor sit amet, conssadipscing elitr, sed diam nonumy eirmod
-                                                    tempvidunt ut labore et dolore magna aliquyam erat,sed diam voluptua. At
-                                                    vero eos et accusam justo duo dolores et ea rebum.gubergren no sea takimata
-                                                    magna aliquyam eratma</p>
-                                            </div>
-                                            <div class="author-id">
-                                                <img src="/images/author.png" alt="">
-
-                                                <div class="author-text">
-                                                    <h4>Sophia</h4>
-
-                                                    <h4>Client, Tech</h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="single-review">
-                                            <div class="review-text">
-                                                <p>Lorem ipsum dolor sit amet, conssadipscing elitr, sed diam nonumy eirmod
-                                                    tempvidunt ut labore et dolore magna aliquyam erat,sed diam voluptua. At
-                                                    vero eos et accusam justo duo dolores et ea rebum.gubergren no sea takimata
-                                                    magna aliquyam eratma</p>
-                                            </div>
-                                            <div class="author-id">
-                                                <img src="/images/author.png" alt="">
-
-                                                <div class="author-text">
-                                                    <h4>Sophia</h4>
-
-                                                    <h4>Client, Tech</h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="single-review">
-                                            <div class="review-text">
-                                                <p>Lorem ipsum dolor sit amet, conssadipscing elitr, sed diam nonumy eirmod
-                                                    tempvidunt ut labore et dolore magna aliquyam erat,sed diam voluptua. At
-                                                    vero eos et accusam justo duo dolores et ea rebum.gubergren no sea takimata
-                                                    magna aliquyam eratma</p>
-                                            </div>
-                                            <div class="author-id">
-                                                <img src="/images/author.png" alt="">
-
-                                                <div class="author-text">
-                                                    <h4>Sophia</h4>
-
-                                                    <h4>Client, Tech</h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </aside>
-                    </div>
-                    <div class="col-md-4">
-                        <aside class="footer-widget">
-                            <h3 class="widget-title text-uppercase">Custom Category Post</h3>
-
-
-                            <div class="custom-post">
-                                <div>
-                                    <a href="#"><img src="/images/footer-img.png" alt=""></a>
-                                </div>
-                                <div>
-                                    <a href="#" class="text-uppercase">Home is peaceful Place</a>
-                                    <span class="p-date">February 15, 2016</span>
-                                </div>
-                            </div>
-                        </aside>
-                    </div>
-                </div>
+                 </div>
             </div>
             <div class="footer-copy">
                 <div class="container">
