@@ -16,20 +16,20 @@ class TagSeeder extends Seeder
                 'slug' => 'anons-matcha',
             ],
             [
-                'title' => 'Тег 2',
-                'slug' => 'teg-2',
+                'title' => 'Интервью игрока',
+                'slug' => 'intervyu-igroka',
             ],
             [
-                'title' => 'Тег 3',
-                'slug' => 'teg-3',
+                'title' => 'Итог матча',
+                'slug' => 'itog-matcha',
             ],
             [
-                'title' => 'Тег 4',
-                'slug' => 'teg-4',
+                'title' => 'Золотой мяч',
+                'slug' => 'zolotoj-myach',
             ],
             [
-                'title' => 'Тег 5',
-                'slug' => 'teg-5',
+                'title' => 'Тренер',
+                'slug' => 'trener',
             ],
         ]);
     }

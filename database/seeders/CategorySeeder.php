@@ -31,6 +31,10 @@ class CategorySeeder extends Seeder
                 "title" => "Чемпионат Беларуси",
                 "slug" => "chempionat-belarusi",
             ],
+            [
+                "title" => "Золотой мяч",
+                "slug" => "zolotoj-myach",
+            ],
         ]);
     }
 }
