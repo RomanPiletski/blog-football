@@ -11,7 +11,7 @@
 
                     <div class="leave-comment mr0"><!--leave comment-->
 
-                        <h3 class="text-uppercase">Регтстрация</h3>
+                        <h3 class="text-uppercase">Регистрация</h3>
                         @include("admin.errors")
                         <br>
                         <form class="form-horizontal contact-form" role="form" method="post" action="/register">
