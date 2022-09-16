@@ -1,6 +1,6 @@
 <div class="col-md-4" data-sticky_column>
     <div class="primary-sidebar">
-        <aside class="widget news-letter">
+        <aside class="widget news-letter tile">
             <h3 class="widget-title text-uppercase text-center">Подписаться на рассылку</h3>
             @include("admin.errors")
             <form action="{{route("subscribe")}}" method="POST">
@@ -11,7 +11,7 @@
             </form>
 
         </aside>
-        <aside class="widget">
+        <aside class="widget tile">
             <div class="wrapper-weather">
                 <p class="wrapper-weather-name">г. {{mb_strtoupper($weather->coordinates()->getCityName())}} {{round($weather->temperature()->getCurrentTemperature(),1)}}&deg C.<br></p>
                  <p style="color: #00acdf" >Ощущается как {{round($weather->temperature()->getFeelsLikeTemperature(),1)}}&deg C.</p>
@@ -20,7 +20,7 @@
                  Давление: {{round($weather->temperature()->getPressure() * 0.75006375541921, 0)}} мм.рт.ст. </p>
             </div>
         </aside>
-        <aside class="widget">
+        <aside class="widget tile">
             <h3 class="widget-title text-uppercase text-center">Популярные статьи</h3>
             @foreach($popularPosts as $post)
             <div class="popular-post">
@@ -35,7 +35,7 @@
             </div>
             @endforeach
         </aside>
-        <aside class="widget">
+        <aside class="widget tile">
             <h3 class="widget-title text-uppercase text-center">Рекомендованные статьи</h3>
 
             <div id="widget-feature" class="owl-carousel">
@@ -54,7 +54,7 @@
                 @endforeach
             </div>
         </aside>
-        <aside class="widget pos-padding">
+        <aside class="widget pos-padding tile">
             <h3 class="widget-title text-uppercase text-center">Недавние статьи</h3>
             @foreach($recentPosts as $post)
             <div class="thumb-latest-posts">
@@ -72,7 +72,7 @@
             </div>
             @endforeach
         </aside>
-        <aside class="widget border pos-padding">
+        <aside class="widget border pos-padding tile">
             <h3 class="widget-title text-uppercase text-center">Рейтинг пользователей</h3>
             <ul>
                 @foreach($ratedUsers as $ratedUser)
@@ -84,7 +84,7 @@
                 @endforeach
             </ul>
         </aside>
-        <aside class="widget border pos-padding">
+        <aside class="widget border pos-padding tile">
             <h3 class="widget-title text-uppercase text-center">Категории статей</h3>
             <ul>
                 @foreach($categories as $category)

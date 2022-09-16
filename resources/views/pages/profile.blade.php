@@ -8,7 +8,7 @@
             <div class="row">
                 <div class="col-md-8">
 
-                    <div class="leave-comment mr0"><!--leave comment-->
+                    <div class="leave-comment mr0 tile"><!--leave comment-->
                         @if(session("status"))
                             <div class="alert alert-success" style="font-size: 16px; text-align: center">{{session("status")}}</div>
                         @endif

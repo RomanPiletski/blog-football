@@ -11,7 +11,7 @@
                     <div class="row">
                         @foreach($posts as $post)
                         <div class="col-md-6">
-                            <article class="post post-grid">
+                            <article class="post post-grid tile">
                                 <div class="post-thumb">
                                     <a href="{{route("post.show", $post->slug)}}"><img src="{{asset("storage/". $post->image)}}" alt=""></a>
 

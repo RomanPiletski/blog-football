@@ -9,35 +9,30 @@
             <div class="row">
                 <div class="col-md-8">
 
-                    <div class="leave-comment mr0"><!--leave comment-->
-
-                        <h3 class="text-uppercase">Регистрация</h3>
+                    <div class="login-box">
+                        <h2>РЕГИСТРАЦИЯ</h2>
                         @include("admin.errors")
-                        <br>
-                        <form class="form-horizontal contact-form" role="form" method="post" action="/register">
+                        <form role="form" method="post" action="/register">
                             @csrf
-                            <div class="form-group">
-                                <div class="col-md-12">
-                                    <input type="text" class="form-control" id="name" name="name"
-                                           placeholder="Name" value="{{old("name")}}">
-                                </div>
+                            <div class="user-box">
+                                <input type="text" id="name" name="name" required="">
+                                <label>Имя</label>
                             </div>
-                            <div class="form-group">
-                                <div class="col-md-12">
-                                    <input type="text" value="{{old("email")}}" class="form-control" id="email" name="email"
-                                           placeholder="Email">
-                                </div>
+                            <div class="user-box">
+                                <input type="text" id="email" name="email" required="">
+                                <label>E-mail</label>
                             </div>
-                            <div class="form-group">
-                                <div class="col-md-12">
-                                    <input type="password" class="form-control" id="password" name="password"
-                                           placeholder="password">
-                                </div>
+                            <div class="user-box">
+                                <input type="password" id="password" name="password" required="">
+                                <label>Пароль</label>
                             </div>
-                            <button type="submit" class="btn send-btn">Регистрация</button>
-
+                            <a><span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <button class="btn-login" type="submit">Зарегестрироваться</button></a>
                         </form>
-                    </div><!--end leave comment-->
+                    </div>
                 </div>
                 @include("pages._sidebar")
             </div>

@@ -7,31 +7,26 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
-
-                    <div class="leave-comment mr0"><!--leave comment-->
-{{--                        @if(session("status"))--}}
-{{--                            <div class="alert alert-danger" style="font-size: 16px; text-align: center">{{session("status")}}</div>--}}
-{{--                        @endif--}}
-                        <h3 class="text-uppercase">Войти</h3>
+                    <div class="login-box">
+                        <h2>ВХОД</h2>
                         @include("admin.errors")
-                        <br>
-                        <form class="form-horizontal contact-form" role="form" method="post" action="/login">
+                        <form role="form" method="post" action="/login">
                             @csrf
-                            <div class="form-group">
-                                <div class="col-md-12">
-                                    <input type="text" class="form-control" id="email" name="email"
-                                           value="{{old("email")}}" placeholder="Email">
-                                </div>
+                            <div class="user-box">
+                                <input type="text" id="email" name="email" required="">
+                                <label>E-mail</label>
                             </div>
-                            <div class="form-group">
-                                <div class="col-md-12">
-                                    <input type="password" class="form-control" id="password" name="password"
-                                           placeholder="password">
-                                </div>
+                            <div class="user-box">
+                                <input type="password" id="password" name="password" required="">
+                                <label>Пароль</label>
                             </div>
-                            <button type="submit" class="btn send-btn">Войти</button>
+                            <a><span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <button class="btn-login" type="submit">Войти</button></a>
                         </form>
-                    </div><!--end leave comment-->
+                    </div>
                 </div>
                 @include("pages._sidebar")
             </div>

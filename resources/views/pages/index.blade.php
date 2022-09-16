@@ -8,7 +8,7 @@
             <div class="row">
                 <div class="col-md-8">
                     @foreach($posts as $post)
-                    <article class="post">
+                    <article class="post tile">
                         <div class="post-thumb">
                             <a href=""><img src="{{asset("storage/". $post->image)}}" alt=""></a>
 
