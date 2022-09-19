@@ -76,36 +76,53 @@
         <div id="footer">
             <div class="footer-instagram-section">
                 <h3 class="footer-instagram-title text-center text-uppercase">Изображения из статей</h3>
+                    <div class="container-foto">
 
-                <div id="footer-instagram" class="owl-carousel">
-
-                    <div class="item">
-                        <a href="/images/ins-1.jpg" target="_blank"><img src="/images/ins-1.jpg" alt=""></a>
+                        <div class="box">
+                            <a href="/images/ins-1.jpg" target="_blank"><div class="imgBx">
+                                <img src="/images/ins-1.jpg" alt="">
+                            </div></a>
+                        </div>
+                        <div class="box">
+                            <a href="/images/ins-2.jpg" target="_blank"><div class="imgBx">
+                                <img src="/images/ins-2.jpg" alt="">
+                            </div></a>
+                        </div>
+                        <div class="box">
+                            <a href="/images/ins-3.jpg" target="_blank"><div class="imgBx">
+                                <img src="/images/ins-3.jpg" alt="">
+                            </div></a>
+                        </div>
+                        <div class="box">
+                            <a href="/images/ins-4.jpg" target="_blank"><div class="imgBx">
+                                <img src="/images/ins-4.jpg" alt="">
+                            </div></a>
+                        </div>
+                        <div class="box">
+                            <a href="/images/ins-5.jpg" target="_blank"><div class="imgBx">
+                                <img src="/images/ins-5.jpg" alt="">
+                            </div></a>
+                        </div>
+                        <div class="box">
+                            <a href="/images/ins-6.jpg" target="_blank"><div class="imgBx">
+                                <img src="/images/ins-6.jpg" alt="">
+                            </div></a>
+                        </div>
+                        <div class="box">
+                            <a href="/images/ins-7.jpg" target="_blank"><div class="imgBx">
+                                <img src="/images/ins-7.jpg" alt="">
+                            </div></a>
+                        </div>
+                        <div class="box">
+                            <a href="/images/ins-8.jpg" target="_blank"><div class="imgBx">
+                                <img src="/images/ins-8.jpg" alt="">
+                            </div></a>
+                        </div>
                     </div>
-                    <div class="item">
-                        <a href="/images/ins-2.jpg" target="_blank"><img src="/images/ins-2.jpg" alt=""></a>
-                    </div>
-                    <div class="item">
-                        <a href="/images/ins-3.jpg" target="_blank"><img src="/images/ins-3.jpg" alt=""></a>
-                    </div>
-                    <div class="item">
-                        <a href="/images/ins-4.jpg" target="_blank"><img src="/images/ins-4.jpg" alt=""></a>
-                    </div>
-                    <div class="item">
-                        <a href="/images/ins-5.jpg" target="_blank"><img src="/images/ins-5.jpg" alt=""></a>
-                    </div>
-                    <div class="item">
-                        <a href="/images/ins-6.jpg" target="_blank"><img src="/images/ins-6.jpg" alt=""></a>
-                    </div>
-                    <div class="item">
-                        <a href="/images/ins-7.jpg" target="_blank"><img src="/images/ins-7.jpg" alt=""></a>
-                    </div>
-                    <div class="item">
-                        <a href="/images/ins-8.jpg" target="_blank"><img src="/images/ins-8.jpg" alt=""></a>
-                    </div>
-                </div>
             </div>
-        </div>
+            </div>
+
+
         <footer class="footer-widget-section">
             <div class="container">
 {{--                 <div class="wrapper-img-about"><img src="/images/footer-logo.png" alt=""></div>--}}
